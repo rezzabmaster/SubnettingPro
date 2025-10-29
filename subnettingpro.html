@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -425,7 +426,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                         </svg>
                     </button>
-                    <button type="button" id="help-button" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Open help tutorial" aria-haspopup="dialog" aria-expanded="false">
+                    <button type="button" id="help-button" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Open help tutorial">
                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
@@ -458,15 +459,15 @@
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <!-- Practice Mode -->
-        <div id="practice-tab-content" class="tab-content" role="tabpanel" aria-labelledby="practice-tab-btn" aria-hidden="false">
+        <div id="practice-tab-content" class="tab-content" role="tabpanel" aria-labelledby="practice-tab-btn">
             <div class="bg-white rounded-lg shadow p-6">
                 <!-- Difficulty Selector -->
                 <div class="mb-6">
                     <label id="practice-difficulty-label" class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
                     <div class="flex flex-wrap gap-2" role="radiogroup" aria-labelledby="practice-difficulty-label">
-                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium" data-difficulty="easy" role="radio" aria-checked="true" tabindex="0">Easy</button>
-                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="medium" role="radio" aria-checked="false" tabindex="-1">Medium</button>
-                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="hard" role="radio" aria-checked="false" tabindex="-1">Hard</button>
+                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium" data-difficulty="easy" role="radio" aria-checked="true">Easy</button>
+                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="medium" role="radio" aria-checked="false">Medium</button>
+                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="hard" role="radio" aria-checked="false">Hard</button>
                     </div>
                     <p id="difficulty-desc" class="text-sm text-gray-500 mt-2">Standard subnets (/24, /16) - Perfect for beginners</p>
                 </div>
@@ -568,7 +569,7 @@
         </div>
 
         <!-- Wildcard Mode -->
-        <div id="wildcard-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="wildcard-tab-btn" aria-hidden="true">
+        <div id="wildcard-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="wildcard-tab-btn">
             <div class="bg-white rounded-lg shadow p-6">
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 flex items-start gap-3" role="alert">
                     <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -581,9 +582,9 @@
                 <div class="mb-6">
                     <label id="wildcard-difficulty-label" class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
                     <div class="flex flex-wrap gap-2" role="radiogroup" aria-labelledby="wildcard-difficulty-label">
-                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium" data-difficulty="easy" role="radio" aria-checked="true" tabindex="0">Easy</button>
-                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="medium" role="radio" aria-checked="false" tabindex="-1">Medium</button>
-                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="hard" role="radio" aria-checked="false" tabindex="-1">Hard</button>
+                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium" data-difficulty="easy" role="radio" aria-checked="true">Easy</button>
+                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="medium" role="radio" aria-checked="false">Medium</button>
+                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="hard" role="radio" aria-checked="false">Hard</button>
                     </div>
                     <p id="wildcard-difficulty-desc" class="text-sm text-gray-500 mt-2">Standard subnets (/24, /16) - Perfect for beginners</p>
                 </div>
@@ -683,7 +684,7 @@
         </div>
 
         <!-- Calculator Mode -->
-        <div id="calculator-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="calculator-tab-btn" aria-hidden="true">
+        <div id="calculator-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="calculator-tab-btn">
             <div class="bg-white rounded-lg shadow p-6">
                 <div class="space-y-6">
                     <!-- IP Input -->
@@ -800,7 +801,7 @@
                             </svg>
                             Prev Subnet
                         </button>
-                        <button type="button" id="calc-list-subnets" class="flex-1 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-medium flex items-center justify-center gap-2" aria-haspopup="dialog" aria-expanded="false">
+                        <button type="button" id="calc-list-subnets" class="flex-1 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-medium flex items-center justify-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
                             List Subnets
                         </button>
@@ -816,7 +817,7 @@
         </div>
 
         <!-- Flashcards Mode -->
-        <div id="flashcards-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="flashcards-tab-btn" aria-hidden="true">
+        <div id="flashcards-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="flashcards-tab-btn">
             <div class="fc-background-grid"></div>
             <div class="fc-content-wrapper">
                 <header>
@@ -850,7 +851,7 @@
     </main>
 
     <!-- Help Modal -->
-    <div id="help-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="help-modal-title" aria-hidden="true">
+    <div id="help-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
         <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden">
             <div class="p-6 border-b border-gray-200 flex items-center justify-between">
                 <h2 id="help-modal-title" class="text-2xl font-bold text-gray-900">Subnetting Tutorial</h2>
@@ -992,10 +993,6 @@
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">✓</span>
-                                <span>A /31 network is a special case for point-to-point links with 2 usable addresses (RFC 3021), and a /32 represents a single host address.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 mt-0.5">✓</span>
                                 <span>Wildcard masks are used in Cisco ACLs and OSPF/EIGRP.</span>
                             </li>
                         </ul>
@@ -1013,7 +1010,7 @@
     </div>
     
     <!-- Subnet List Modal -->
-    <div id="subnet-list-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="subnet-list-modal-title" aria-hidden="true">
+    <div id="subnet-list-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="subnet-list-modal-title">
         <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden">
             <div class="p-6 border-b border-gray-200 flex items-center justify-between">
                 <h2 id="subnet-list-modal-title" class="text-2xl font-bold text-gray-900">Subnet List</h2>
@@ -1031,13 +1028,16 @@
 
     <!-- All JavaScript embedded inline -->
     <script>
+        /* Safer SubnetMath replacement */
         const SubnetMath = {
+          // Convert IP string to 32-bit unsigned number
           ipToNumber(ip) {
             const parts = ip.trim().split('.');
-            if (parts.length !== 4) return null;
+            if (parts.length !== 4) throw new Error('Invalid IP format');
             return parts.reduce((acc, octet) => (acc << 8) + Number(octet), 0) >>> 0;
           },
 
+          // Convert 32-bit unsigned number to IP string
           numberToIp(num) {
             return [
               (num >>> 24) & 0xff,
@@ -1047,538 +1047,846 @@
             ].join('.');
           },
 
+          // Strict IP validation (each octet 0-255, no extra characters)
           isValidIp(ip) {
             if (typeof ip !== 'string') return false;
             const regex = /^(25[0-5]|2[0-4]\d|1?\d{1,2})\.(25[0-5]|2[0-4]\d|1?\d{1,2})\.(25[0-5]|2[0-4]\d|1?\d{1,2})\.(25[0-5]|2[0-4]\d|1?\d{1,2})$/;
             return regex.test(ip.trim());
           },
 
+          // Calculate subnet mask from CIDR safely
           cidrToMask(cidr) {
             cidr = Number(cidr);
             if (isNaN(cidr) || cidr < 0 || cidr > 32) return null;
-            if (cidr === 0) return 0;
-            return (0xFFFFFFFF << (32 - cidr)) >>> 0;
+            if (cidr === 0) return '0.0.0.0';
+            // (0xFFFFFFFF << (32 - cidr)) >>> 0 is safe because (32-cidr) is in [0,31]
+            const maskNum = (0xFFFFFFFF << (32 - cidr)) >>> 0;
+            return this.numberToIp(maskNum);
           },
 
-          numberToBinary(num) {
-            let binary = (num >>> 0).toString(2).padStart(32, '0');
-            return binary.match(/.{1,8}/g).join('.');
+          // Calculate wildcard mask from CIDR by inverting mask
+          cidrToWildcard(cidr) {
+            cidr = Number(cidr);
+            if (isNaN(cidr) || cidr < 0 || cidr > 32) return null;
+            const maskNum = (cidr === 0) ? 0 : (0xFFFFFFFF << (32 - cidr)) >>> 0;
+            const wildcardNum = (~maskNum) >>> 0;
+            return this.numberToIp(wildcardNum);
           },
 
+          // Get network address (safe bit ops)
+          getNetworkAddress(ip, cidr) {
+            if (!this.isValidIp(ip)) throw new Error('Invalid IP');
+            cidr = Number(cidr);
+            if (isNaN(cidr) || cidr < 0 || cidr > 32) throw new Error('Invalid CIDR');
+            const ipNum = this.ipToNumber(ip);
+            const maskNum = (cidr === 0) ? 0 : (0xFFFFFFFF << (32 - cidr)) >>> 0;
+            const networkNum = (ipNum & maskNum) >>> 0;
+            return this.numberToIp(networkNum);
+          },
+
+          // Get broadcast address by ORing wildcard
+          getBroadcastAddress(network, cidr) {
+            if (!this.isValidIp(network)) throw new Error('Invalid IP');
+            cidr = Number(cidr);
+            if (isNaN(cidr) || cidr < 0 || cidr > 32) throw new Error('Invalid CIDR');
+            const networkNum = this.ipToNumber(network);
+            const maskNum = (cidr === 0) ? 0 : (0xFFFFFFFF << (32 - cidr)) >>> 0;
+            const wildcard = (~maskNum) >>> 0;
+            const broadcastNum = (networkNum | wildcard) >>> 0;
+            return this.numberToIp(broadcastNum);
+          },
+
+          // Get first usable host (handle /31 and /32)
+          getFirstHost(network, cidr) {
+            if (!this.isValidIp(network)) throw new Error('Invalid IP');
+            cidr = Number(cidr);
+            const networkNum = this.ipToNumber(network);
+            if (cidr >= 31) {
+              return this.numberToIp(networkNum);
+            }
+            return this.numberToIp((networkNum + 1) >>> 0);
+          },
+
+          // Get last usable host (handle /31 and /32)
+          getLastHost(broadcast, cidr) {
+            if (!this.isValidIp(broadcast)) throw new Error('Invalid IP');
+            cidr = Number(cidr);
+            const broadcastNum = this.ipToNumber(broadcast);
+            if (cidr >= 31) {
+              return this.numberToIp(broadcastNum);
+            }
+            return this.numberToIp((broadcastNum - 1) >>> 0);
+          },
+
+          // Get IP class
           getIpClass(ip) {
-            if (!this.isValidIp(ip)) return 'Invalid';
+            if (!this.isValidIp(ip)) return 'Unknown';
             const firstOctet = parseInt(ip.split('.')[0], 10);
             if (firstOctet >= 1 && firstOctet <= 126) return 'A';
-            if (firstOctet === 127) return 'Loopback';
             if (firstOctet >= 128 && firstOctet <= 191) return 'B';
             if (firstOctet >= 192 && firstOctet <= 223) return 'C';
             if (firstOctet >= 224 && firstOctet <= 239) return 'D';
-            if (firstOctet >= 240 && firstOctet <= 255) return 'E';
-            return 'Unknown';
+            return 'E';
           },
 
-          getSubnetInfo(ip, cidr) {
-            if (!this.isValidIp(ip)) return null;
+          // Calculate complete subnet info (safer and handles /31 & /32)
+          calculateSubnetInfo(ip, cidr) {
+            if (!this.isValidIp(ip) || isNaN(cidr) || cidr < 0 || cidr > 32) return null;
             cidr = Number(cidr);
-            if (isNaN(cidr) || cidr < 0 || cidr > 32) return null;
-            
-            const ipNum = this.ipToNumber(ip);
-            const maskNum = this.cidrToMask(cidr);
-            const networkNum = (ipNum & maskNum) >>> 0;
-            const broadcastNum = (networkNum | (~maskNum)) >>> 0;
-            const totalHosts = Math.pow(2, 32 - cidr);
-            
-            let firstHost, lastHost, usableHosts;
-            if (cidr === 32) {
-                firstHost = this.numberToIp(networkNum);
-                lastHost = this.numberToIp(networkNum);
-                usableHosts = 1;
-            } else if (cidr === 31) {
-                firstHost = this.numberToIp(networkNum);
-                lastHost = this.numberToIp(broadcastNum);
-                usableHosts = 2;
+            const network = this.getNetworkAddress(ip, cidr);
+            const mask = this.cidrToMask(cidr);
+            const wildcard = this.cidrToWildcard(cidr);
+            const broadcast = this.getBroadcastAddress(network, cidr);
+            const hostBits = 32 - cidr;
+            const totalHosts = (hostBits >= 0) ? Math.pow(2, hostBits) : 0;
+
+            let usableHosts;
+            if (cidr >= 31) {
+              usableHosts = (cidr === 31) ? 2 : 1;
             } else {
-                firstHost = this.numberToIp(networkNum + 1);
-                lastHost = this.numberToIp(broadcastNum - 1);
-                usableHosts = totalHosts > 2 ? totalHosts - 2 : 0;
+              usableHosts = Math.max(0, totalHosts - 2);
             }
+
+            const firstHost = this.getFirstHost(network, cidr);
+            const lastHost = this.getLastHost(broadcast, cidr);
 
             return {
-              network: this.numberToIp(networkNum),
-              broadcast: this.numberToIp(broadcastNum),
-              mask: this.numberToIp(maskNum),
-              wildcard: this.numberToIp((~maskNum) >>> 0),
-              firstHost: firstHost,
-              lastHost: lastHost,
-              totalHosts: totalHosts,
-              usableHosts: usableHosts,
-              ipClass: this.getIpClass(ip),
-              cidr: cidr
+              network, firstHost, lastHost, broadcast, mask, wildcard, cidr,
+              totalHosts, usableHosts, classType: this.getIpClass(ip),
+              maskBits: cidr, hostBits
             };
+          },
+
+          // Get next subnet
+          getNextSubnet(network, cidr) {
+            if (!this.isValidIp(network) || isNaN(cidr) || cidr < 0 || cidr > 32) return null;
+            const netNum = this.ipToNumber(network);
+            const blockSize = Math.pow(2, 32 - cidr);
+            const nextNetNum = (netNum + blockSize) >>> 0;
+            return this.numberToIp(nextNetNum);
+          },
+
+          // Get previous subnet
+          getPreviousSubnet(network, cidr) {
+            if (!this.isValidIp(network) || isNaN(cidr) || cidr < 0 || cidr > 32) return null;
+            const networkNum = this.ipToNumber(network);
+            const subnetSize = Math.pow(2, 32 - cidr);
+            const prevNum = (networkNum - subnetSize) >>> 0;
+            return this.numberToIp(prevNum);
+          },
+
+          // Convert IP to binary
+          ipToBinary(ip) {
+            if (!this.isValidIp(ip)) return "Invalid IP Address";
+            return ip.split('.').map(n => parseInt(n, 10).toString(2).padStart(8, '0')).join('.');
+          },
+
+          // Generate random IP for practice
+          generateRandomIp(difficulty = 'easy') {
+            const configs = {
+              easy: [ { cidr: 24, class: 'C' }, { cidr: 16, class: 'B' } ],
+              medium: [ { cidr: 27, class: 'C' }, { cidr: 26, class: 'C' }, { cidr: 21, class: 'B' } ],
+              hard: [ { cidr: 28, class: 'C' }, { cidr: 29, class: 'C' }, { cidr: 19, class: 'B' } ]
+            };
+            const config = configs[difficulty][Math.floor(Math.random() * configs[difficulty].length)];
+            let firstOctet;
+            if (config.class === 'A') firstOctet = Math.floor(Math.random() * 126) + 1;
+            else if (config.class === 'B') firstOctet = Math.floor(Math.random() * 64) + 128;
+            else firstOctet = Math.floor(Math.random() * 32) + 192;
+            const ip = `${firstOctet}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
+            return { ip, cidr: config.cidr };
           }
         };
+        
+        // --- Flashcard Data ---
+        const FLASHCARD_DATA = [
+            { "question": "How many bits are in an IPv4 address?", "answer": "32-bits", "difficulty": "easy" },
+            { "question": "How many octets are in an IPv4 address?", "answer": "4", "difficulty": "easy" },
+            { "question": "What is the subnet mask for 172.16.132.65/16?", "answer": "255.255.0.0", "difficulty": "easy" },
+            { "question": "What is the subnet mask of 192.168.32.44/24?", "answer": "255.255.255.0", "difficulty": "easy" },
+            { "question": "What is the class A private IP address range?", "answer": "10.0.0.0 - 10.255.255.255", "difficulty": "easy" },
+            { "question": "What is the class B private IP address range?", "answer": "172.16.0.0 – 172.31.255.255", "difficulty": "easy" },
+            { "question": "What is the class C private IP address range?", "answer": "192.168.0.0 – 192.168.255.255", "difficulty": "easy" },
+            { "question": "What is the main purpose of private IP addresses?", "answer": "The main purpose of private IP addresses is to prolong the life of IPv4.", "difficulty": "easy" },
+            { "question": "What is a network route?", "answer": "A route that points to a network address. For example: 192.168.0.0/24", "difficulty": "easy" },
+            { "question": "What is a host route?", "answer": "A host route points to a specific address. It will have a /32 mask. For example: 192.168.1.5/32", "difficulty": "easy" },
+            { "question": "What is a default route?", "answer": "A default route is used as a last resort if no other routes match", "difficulty": "easy" },
+            { "question": "What is the Class A default subnet mask?", "answer": "255.0.0.0 or /8", "difficulty": "easy" },
+            { "question": "What is the Class B default subnet mask?", "answer": "255.255.0.0 or /16", "difficulty": "easy" },
+            { "question": "What is the Class C default subnet mask?", "answer": "255.255.255.0 or /24", "difficulty": "easy" },
+            { "question": "What does CIDR stand for?", "answer": "Classless Inter-Domain Routing", "difficulty": "easy" },
+            { "question": "What is the range of Class A IP addresses?", "answer": "1.0.0.0 to 126.255.255.255", "difficulty": "easy" },
+            { "question": "What is the range of Class B IP addresses?", "answer": "128.0.0.0 to 191.255.255.255", "difficulty": "easy" },
+            { "question": "What is the range of Class C IP addresses?", "answer": "192.0.0.0 to 223.255.255.255", "difficulty": "easy" },
+            { "question": "What is the loopback IP address in IPv4?", "answer": "127.0.0.0/8", "difficulty": "easy" },
+            { "question": "What is the broadcast address for all IPv4 networks?", "answer": "255.255.255.255", "difficulty": "easy" },
+            { "question": "What does /24 mean in CIDR notation?", "answer": "Subnet mask of 255.255.255.0", "difficulty": "easy" },
+            { "question": "What is the number of hosts in a /24 network?", "answer": "254 usable hosts", "difficulty": "easy" },
+            { "question": "What is the wildcard mask for /24?", "answer": "0.0.0.255", "difficulty": "easy" },
+            { "question": "Convert /16 to dotted decimal subnet mask.", "answer": "255.255.0.0", "difficulty": "easy" },
+            { "question": "What is the network address for 192.168.1.100/24?", "answer": "192.168.1.0", "difficulty": "easy" },
+            { "question": "What is the broadcast address for 10.0.0.50/8?", "answer": "10.255.255.255", "difficulty": "easy" },
+            { "question": "How many subnets can you create with 2 subnet bits?", "answer": "4 subnets", "difficulty": "easy" },
+            { "question": "How many hosts per subnet with 2 host bits?", "answer": "2 usable hosts", "difficulty": "easy" },
+            { "question": "What is the subnet mask for Class A in binary?", "answer": "11111111.00000000.00000000.00000000", "difficulty": "easy" },
+            { "question": "What is VLSM?", "answer": "Variable Length Subnet Masking, allowing different subnet sizes within the same network", "difficulty": "easy" },
+            { "question": "What is FLSM?", "answer": "Fixed Length Subnet Masking, using the same subnet size for all subnets", "difficulty": "easy" },
+            { "question": "What is the first private IP range?", "answer": "10.0.0.0/8", "difficulty": "easy" },
+            { "question": "What is the last private IP range?", "answer": "172.16.0.0/12 to 172.31.255.255/16", "difficulty": "easy" },
+            { "question": "What is APIPA range?", "answer": "169.254.0.0/16", "difficulty": "easy" },
+            { "question": "Convert 255.255.255.192 to CIDR.", "answer": "/26", "difficulty": "easy" },
+            { "question": "What is the increment for /26?", "answer": "64", "difficulty": "easy" },
+            { "question": "How many usable hosts in /30?", "answer": "2", "difficulty": "easy" },
+            { "question": "What is the subnet for 172.16.10.5/20?", "answer": "172.16.0.0/20", "difficulty": "easy" },
+            { "question": "What is supernetting?", "answer": "Combining multiple networks into a larger one, also called route summarization", "difficulty": "easy" },
+            { "question": "What is the /8 equivalent in binary?", "answer": "First 8 bits are 1s", "difficulty": "easy" },
+            { "question": "Identify the class of 200.10.20.30.", "answer": "Class C", "difficulty": "easy" },
+            { "question": "What is the default gateway typically?", "answer": "First usable IP in the subnet", "difficulty": "easy" },
+            { "question": "What is a /32 address?", "answer": "Single host address", "difficulty": "easy" },
+            { "question": "Convert /27 to dotted decimal.", "answer": "255.255.255.224", "difficulty": "easy" },
+            { "question": "How many subnets in a Class C with 3 subnet bits?", "answer": "8", "difficulty": "easy" },
+            { "question": "How many hosts in a Class B /18?", "answer": "16382 usable", "difficulty": "easy" },
+            { "question": "What is the binary for 255?", "answer": "11111111", "difficulty": "easy" },
+            { "question": "What is the binary for 128?", "answer": "10000000", "difficulty": "easy" },
+            { "question": "What is the binary for 192?", "answer": "11000000", "difficulty": "easy" },
+            { "question": "What is the binary for 224?", "answer": "11100000", "difficulty": "easy" },
+            { "question": "What is the binary for 240?", "answer": "11110000", "difficulty": "easy" },
+            { "question": "What is the binary for 248?", "answer": "11111000", "difficulty": "easy" },
+            { "question": "What is the binary for 252?", "answer": "11111100", "difficulty": "easy" },
+            { "question": "What is the binary for 254?", "answer": "11111110", "difficulty": "easy" },
+            { "question": "What is the decimal for 11111111?", "answer": "255", "difficulty": "easy" },
+            { "question": "What is the decimal for 11111110?", "answer": "254", "difficulty": "easy" },
+            { "question": "What is the decimal for 11111100?", "answer": "252", "difficulty": "easy" },
+            { "question": "What is the decimal for 11111000?", "answer": "248", "difficulty": "easy" },
+            { "question": "What is the decimal for 11110000?", "answer": "240", "difficulty": "easy" },
+            { "question": "What is the decimal for 11100000?", "answer": "224", "difficulty": "easy" },
+            { "question": "What is the decimal for 11000000?", "answer": "192", "difficulty": "easy" },
+            { "question": "What is the decimal for 10000000?", "answer": "128", "difficulty": "easy" },
+            { "question": "How many bits in a subnet mask?", "answer": "32", "difficulty": "easy" },
+            { "question": "What is the range of public IP addresses?", "answer": "1.0.0.0 to 223.255.255.255 (excluding private)", "difficulty": "easy" },
+            { "question": "What is the /0 mask?", "answer": "0.0.0.0 - default route", "difficulty": "easy" },
+            { "question": "What is the increment for /25?", "answer": "128", "difficulty": "medium" },
+            { "question": "Find the network address for 192.168.5.130/26.", "answer": "192.168.5.128/26", "difficulty": "medium" },
+            { "question": "What is the broadcast for 10.1.2.50/28?", "answer": "10.1.2.63", "difficulty": "medium" },
+            { "question": "How many usable hosts in /25?", "answer": "126", "difficulty": "medium" },
+            { "question": "Subnet 192.168.1.0/24 into 8 subnets. What is the mask?", "answer": "/27 or 255.255.255.224", "difficulty": "medium" },
+            { "question": "First subnet for 172.16.0.0/16 with /20 mask?", "answer": "172.16.0.0/20", "difficulty": "medium" },
+            { "question": "Last usable IP for 203.0.113.64/27?", "answer": "203.0.113.94", "difficulty": "medium" },
+            { "question": "How many subnets in Class C with /28 mask?", "answer": "16", "difficulty": "medium" },
+            { "question": "What is the wildcard for 255.255.255.240?", "answer": "0.0.0.15", "difficulty": "medium" },
+            { "question": "Convert 10.0.0.0/12 to number of networks.", "answer": "4096 /24 networks", "difficulty": "medium" },
+            { "question": "Find the subnet for 192.168.100.200/23.", "answer": "192.168.100.0/23", "difficulty": "medium" },
+            { "question": "How many hosts in /22?", "answer": "1022 usable", "difficulty": "medium" },
+            { "question": "Broadcast for 172.20.10.33/27?", "answer": "172.20.10.63", "difficulty": "medium" },
+            { "question": "Subnet 10.10.10.0/24 for 50 hosts. What mask?", "answer": "/26 or 255.255.255.192", "difficulty": "medium" },
+            { "question": "Number of subnets with 5 subnet bits in Class B.", "answer": "32", "difficulty": "medium" },
+            { "question": "First usable IP for 198.51.100.0/30?", "answer": "198.51.100.1", "difficulty": "medium" },
+            { "question": "What is /29 in binary mask?", "answer": "11111111.11111111.11111111.11111000", "difficulty": "medium" },
+            { "question": "Subnet range for 192.0.2.0/25 second subnet.", "answer": "192.0.2.128/25", "difficulty": "medium" },
+            { "question": "How many /30 subnets in a /24?", "answer": "64", "difficulty": "medium" },
+            { "question": "Wildcard for /23?", "answer": "0.0.1.255", "difficulty": "medium" },
+            { "question": "Network address for 203.0.113.5/28?", "answer": "203.0.113.0/28", "difficulty": "medium" },
+            { "question": "Hosts per subnet in Class A /13?", "answer": "524286 usable", "difficulty": "medium" },
+            { "question": "Increment for /29?", "answer": "8", "difficulty": "medium" },
+            { "question": "Broadcast for 10.10.255.240/28?", "answer": "10.10.255.255", "difficulty": "medium" },
+            { "question": "Subnet 172.16.0.0/16 into 16 subnets. Mask?", "answer": "/20", "difficulty": "medium" },
+            { "question": "Last subnet for 192.168.0.0/24 with /27?", "answer": "192.168.0.224/27", "difficulty": "medium" },
+            { "question": "Usable hosts in /23?", "answer": "510", "difficulty": "medium" },
+            { "question": "Find subnet for 172.16.45.130/22.", "answer": "172.16.44.0/22", "difficulty": "medium" },
+            { "question": "How many /25 in a /16?", "answer": "512", "difficulty": "medium" },
+            { "question": "Wildcard for 255.255.252.0?", "answer": "0.0.3.255", "difficulty": "medium" },
+            { "question": "First usable for 10.0.0.0/8?", "answer": "10.0.0.1", "difficulty": "medium" },
+            { "question": "Number of subnets for Class C /27?", "answer": "8", "difficulty": "medium" },
+            { "question": "Broadcast for 192.168.1.129/25?", "answer": "192.168.1.255", "difficulty": "medium" },
+            { "question": "Subnet 10.0.0.0/8 for 1000 hosts. Mask?", "answer": "/22", "difficulty": "medium" },
+            { "question": "Increment for /22?", "answer": "4", "difficulty": "medium" },
+            { "question": "Network for 172.30.200.150/23?", "answer": "172.30.200.0/23", "difficulty": "medium" },
+            { "question": "Hosts in /28?", "answer": "14 usable", "difficulty": "medium" },
+            { "question": "Last usable for 203.0.113.32/27?", "answer": "203.0.113.62", "difficulty": "medium" },
+            { "question": "How many bits for 16 subnets?", "answer": "4 subnet bits", "difficulty": "medium" },
+            { "question": " /20 to dotted decimal?", "answer": "255.255.240.0", "difficulty": "medium" },
+            { "question": "Subnet 192.168.10.0/24 into /28. How many subnets?", "answer": "16", "difficulty": "medium" },
+            { "question": "Wildcard for /28?", "answer": "0.0.0.15", "difficulty": "medium" },
+            { "question": "Broadcast for 10.10.10.100/30?", "answer": "10.10.10.103", "difficulty": "medium" },
+            { "question": "Using VLSM on 192.168.1.0/24, allocate for 100 hosts. What subnet?", "answer": "192.168.1.0/25 (128 hosts)", "difficulty": "hard" },
+            { "question": "For 10.0.0.0/16, create VLSM for 500, 200, 100 hosts. List subnets.", "answer": "10.0.0.0/23 (510), 10.0.2.0/24 (254), 10.0.3.0/25 (126)", "difficulty": "hard" },
+            { "question": "Supernet 192.168.0.0/24 and 192.168.1.0/24. What summary?", "answer": "192.168.0.0/23", "difficulty": "hard" },
+            { "question": "Given 172.16.0.0/16, VLSM for departments: 2000, 1000, 500, 250, 125 hosts. Assign masks and ranges.", "answer": "/21 (2046), /22 (1022), /23 (510), /24 (254), /25 (126) - starting from 172.16.0.0", "difficulty": "hard" },
+            { "question": "Calculate the number of subnets and hosts for 192.168.0.0/16 with /21 mask.", "answer": "2^(21-16)=32 subnets, each with 2^(32-21)-2=2046 hosts", "difficulty": "hard" },
+            { "question": "Using VLSM on 203.0.113.0/24 for 4 subnets: 50, 30, 20, 10 hosts. List all ranges.", "answer": "/26 (62) 203.0.113.0-63, /27 (30) 203.0.113.64-95, /28 (14) 203.0.113.96-111, /28 (14) 203.0.113.112-127", "difficulty": "hard" },
+            { "question": "Supernet the following: 172.16.4.0/24, 172.16.5.0/24, 172.16.6.0/24, 172.16.7.0/24.", "answer": "172.16.4.0/22", "difficulty": "hard" },
+            { "question": "For a network 10.0.0.0/8, how many /24 subnets are there?", "answer": "65536", "difficulty": "hard" },
+            { "question": "Design VLSM for 192.0.2.0/24: subnets for 100, 50, 25, 12 hosts, efficient allocation.", "answer": "/25 192.0.2.0/25 (126), /26 192.0.2.128/26 (62), /27 192.0.2.192/27 (30), /28 192.0.2.224/28 (14)", "difficulty": "hard" },
+            { "question": "What is the smallest summary for 198.51.100.0/26 and 198.51.100.64/26?", "answer": "198.51.100.0/25", "difficulty": "hard" },
+            { "question": "Calculate VLSM for Class B 172.20.0.0/16: 8 subnets of 4000 hosts each.", "answer": "/19 mask (8190 hosts), 8 subnets: 172.20.0.0, 172.20.32.0, etc.", "difficulty": "hard" },
+            { "question": "Find overlapping issue in VLSM: allocate /26 then /25 in same space.", "answer": " /25 would overlap the /26 if not careful; must allocate non-overlapping.", "difficulty": "hard" },
+            { "question": "For 203.0.113.0/24, VLSM for 3 subnets: 100, 50, 20 hosts. Ranges?", "answer": "/25 203.0.113.0-127 (126 usable), /26 203.0.113.128-191 (62 usable), /27 203.0.113.192-223 (30 usable)", "difficulty": "hard" },
+            { "question": "How many bits to borrow for 64 subnets in Class A?", "answer": "6 bits (2^6=64)", "difficulty": "hard" },
+            { "question": "Summary route for 192.168.100.0/24 to 192.168.103.0/24.", "answer": "192.168.100.0/22", "difficulty": "hard" },
+            { "question": "VLSM on 172.16.0.0/16 for serial links (/30) 5, LANs (/24) 3. Allocate.", "answer": "LANs: 172.16.0.0/24, 172.16.1.0/24, 172.16.2.0/24; Serial: 172.16.3.0/30, etc.", "difficulty": "hard" },
+            { "question": "What is the CIDR for mask 255.255.255.252?", "answer": "/30", "difficulty": "hard" },
+            { "question": "Find if 10.10.10.10/8 is valid in private range.", "answer": "Yes, within 10.0.0.0/8", "difficulty": "hard" },
+            { "question": "Design VLSM for 50 hosts, then 25 in remaining space.", "answer": "/26 for 50 (62), then /27 for 25 (30) in next block.", "difficulty": "hard" },
+            { "question": "Supernet Class C blocks 200.10.20.0/24 to 200.10.23.0/24.", "answer": "200.10.20.0/22", "difficulty": "hard" },
+            { "question": "Calculate hosts for /9 in Class A.", "answer": "131070 usable", "difficulty": "hard" },
+            { "question": "VLSM efficiency for allocating /27 when needing 20 hosts.", "answer": "30 usable hosts, so 10 addresses are wasted (30-20)", "difficulty": "hard" },
+            { "question": "Allocate VLSM for 400 hosts in 10.0.0.0/16.", "answer": "/23 (510 usable), 10.0.0.0/23", "difficulty": "hard" },
+            { "question": "What mask for exactly 1000 hosts? (closest)", "answer": "/22 (1022 usable)", "difficulty": "hard" },
+            { "question": "Find the subnet boundary for IP 192.0.2.150/23.", "answer": "Network: 192.0.2.0. Broadcast: 192.0.3.255", "difficulty": "hard" },
+            { "question": "Using VLSM, how to avoid overlap in allocation?", "answer": "Allocate in order of largest to smallest subnet, using sequential non-overlapping blocks.", "difficulty": "hard" },
+            { "question": "Supernet 10.64.0.0/18 and 10.96.0.0/18.", "answer": "10.64.0.0/17", "difficulty": "hard" },
+            { "question": "Number of /28 subnets in /20.", "answer": "2^(28-20) = 2^8 = 256", "difficulty": "hard" },
+            { "question": "Calculate VLSM table for 192.168.10.0/24: subnets for 60, 30, 14 hosts.", "answer": "/26 (62h) 192.168.10.0-63, /27 (30h) 64-95, /28 (14h) 96-111", "difficulty": "hard" },
+            { "question": "What is the longest prefix match for 172.16.5.10 between /16 and /20?", "answer": "/20", "difficulty": "hard" },
+            { "question": "Design supernet for 4 contiguous /24 networks.", "answer": "/22", "difficulty": "hard" },
+            { "question": "VLSM for WAN links /30 and LAN /23 in 172.18.0.0/16.", "answer": "LAN 172.18.0.0/23, WAN 172.18.2.0/30 etc.", "difficulty": "hard" },
+            { "question": "Summary route for non-contiguous 192.168.1.0/24 and 192.168.3.0/24.", "answer": "Cannot summarize without including 192.168.2.0/24; use two separate routes.", "difficulty": "hard" },
+            { "question": "Calculate the CIDR for mask 255.255.128.0.", "answer": "/17", "difficulty": "hard" },
+            { "question": "What is the binary representation of the subnet mask /13?", "answer": "11111111.11111000.00000000.00000000", "difficulty": "hard" },
+            { "question": "Using VLSM, optimize for 200 hosts in 172.16.0.0/20 remaining space after two /24.", "answer": "After 172.16.0.0/24 and 172.16.1.0/24, next available is 172.16.2.0. Use /23 for 200 hosts (510 usable).", "difficulty": "hard" },
+            { "question": "Find the optimal VLSM mask for exactly 500 hosts.", "answer": "/23 (510 usable)", "difficulty": "hard" },
+            { "question": "Supernet 203.0.113.0/25 and 203.0.113.128/25.", "answer": "203.0.113.0/24", "difficulty": "hard" },
+            { "question": "VLSM for point-to-point /30, department /25, server /27 in 10.10.0.0/16.", "answer": "Dept 10.10.0.0/25, Server 10.10.0.128/27, P2P 10.10.0.160/30", "difficulty": "hard" },
+            { "question": "What is the subnet ID for IP 198.51.100.200 with mask /23?", "answer": "198.51.100.0", "difficulty": "hard" },
+            { "question": "Design a VLSM scheme for a company with 5 departments: 300, 150, 75, 40, 20 hosts in a /18 network.", "answer": "/23 (510), /24 (254), /25 (126), /26 (62), /27 (30). Allocate sequentially from the /18 block.", "difficulty": "hard" },
+            { "question": "Summary route for 172.16.32.0/20, 172.16.48.0/20, 172.16.64.0/20.", "answer": "These are not contiguous. The first two can be summarized to 172.16.32.0/19.", "difficulty": "hard" },
+            { "question": "Is 192.168.100.50/16 a valid private address?", "answer": "Yes, it falls within the 192.168.0.0/16 range.", "difficulty": "hard" },
+            { "question": "VLSM allocation avoiding waste for 62 hosts exactly.", "answer": "/26 (62 usable)", "difficulty": "hard" },
+            { "question": "What mask allows 8 subnets in Class C with max hosts?", "answer": "Borrow 3 bits from the host portion of a /24, resulting in a /27 mask. This creates 8 subnets, each with 30 usable hosts.", "difficulty": "hard" },
+            { "question": "Find the VLSM block for the 4th largest subnet in a scheme for 1000, 500, 250, 125 hosts.", "answer": "/25 for 125 hosts", "difficulty": "hard" },
+            { "question": "Supernet non-adjacent /24s: 10.10.1.0 and 10.10.3.0.", "answer": "A summary would be 10.10.0.0/22, but this includes the unused 10.10.0.0/24 and 10.10.2.0/24.", "difficulty": "hard" },
+            { "question": "Calculate total IPs used in VLSM for 3 /30 and 2 /24.", "answer": "3*4 + 2*256 = 12 + 512 = 524", "difficulty": "hard" },
+            { "question": "What is the prefix length for 255.255.254.0?", "answer": "/23", "difficulty": "hard" },
+            { "question": "Optimize VLSM for minimal waste in /24 for 4 subnets of 14 hosts each.", "answer": "Use four /28 subnets. Each provides 14 usable hosts, fitting perfectly.", "difficulty": "hard" },
+            { "question": "Detect error in allocation if /26 followed by /27 overlapping.", "answer": "If /26 is 192.168.1.0-63, a /27 starting at 192.168.1.32 would overlap.", "difficulty": "hard" },
+            { "question": "The mask for 2^10 hosts approx.", "answer": "/22 (1022 usable hosts)", "difficulty": "hard" },
+            { "question": "Supernet 172.16.0.0/23 and 172.16.2.0/23.", "answer": "172.16.0.0/22", "difficulty": "hard" },
+            { "question": "Full VLSM table for 10.0.0.0/24: 120, 60, 30, 15 hosts.", "answer": "Not possible, the sum of hosts (225) + network/broadcast addresses exceeds the 256 available in a /24.", "difficulty": "hard" },
+            { "question": "How does CIDR affect routing tables?", "answer": "Reduces their size by allowing route summarization (aggregation).", "difficulty": "hard" },
+            { "question": "Calculate the number of wasted IPs in supernetting 8 /24 to /21.", "answer": "None. A /21 block contains exactly 2048 addresses, same as 8 * 256.", "difficulty": "hard" },
+            { "question": "VLSM for mobile users 5 /30 in remaining after LAN /20.", "answer": "After 10.0.0.0/20 (10.0.0.0-10.0.15.255), start at 10.0.16.0/30, 10.0.16.4/30, etc.", "difficulty": "hard" },
+            { "question": "What is the binary for wildcard 0.0.0.63?", "answer": "00000000.00000000.00000000.00111111", "difficulty": "hard" },
+            { "question": "Design a hierarchical addressing scheme using VLSM for campus network.", "answer": "Core /16, buildings /20, floors /24, labs /28.", "difficulty": "hard" },
+            { "question": "Find the LPM for IP 10.10.10.10 with routes /8, /16, /24.", "answer": "/24", "difficulty": "hard" },
+            { "question": "Optimize supernet for 172.16.64.0/18 to 172.16.127.0/18.", "answer": "These are two separate subnets within 172.16.0.0/17. A summary would be 172.16.0.0/16 but includes more.", "difficulty": "hard" },
+            { "question": "What mask for 4096 hosts?", "answer": "/20 (4094 usable hosts)", "difficulty": "hard" },
+            { "question": "Summary route calculation for OSPF area.", "answer": "Use the `area range` command on an ABR to summarize routes into a single prefix.", "difficulty": "hard" },
+            { "question": "The /12 private range start.", "answer": "172.16.0.0", "difficulty": "hard" },
+            { "question": "Binary calculation for subnet increment 32.", "answer": "The block size is 32, so the mask is /27. The last octet binary is 11100000.", "difficulty": "hard" },
+            { "question": "Supernet efficiency for 16 /25 to /21.", "answer": "A /21 is 2048 IPs. 16 * 128 IPs (/25) = 2048 IPs. It's 100% efficient.", "difficulty": "hard" },
+            { "question": "VLSM for VoIP /28, data /23, management /25 in /16.", "answer": "Data 10.0.0.0/23, Mgmt 10.0.2.0/25, VoIP 10.0.2.128/28", "difficulty": "hard" },
+            { "question": "What is the CIDR notation for wildcard 0.0.15.255?", "answer": "/20", "difficulty": "hard" },
+            { "question": "Calculate the route summarization for branch offices 10.10.40.0/22 to 10.10.43.0/22.", "answer": "This covers four /22 networks. The summary is 10.10.40.0/20.", "difficulty": "hard" },
+            { "question": "Find the mask for 2^20 IPs.", "answer": "/12 (32-20=12)", "difficulty": "hard" },
+            { "question": "The inverse mask for ACL matching /25.", "answer": "0.0.0.127", "difficulty": "hard" },
+            { "question": "Supernet 199.116.160.0/20 and 199.116.176.0/20.", "answer": "199.116.160.0/19", "difficulty": "hard" },
+            { "question": "Design VLSM for DMZ /27, internal /19, external /22 in /16.", "answer": "Internal 172.16.0.0/19, External 172.16.32.0/22, DMZ 172.16.36.0/27", "difficulty": "hard" },
+            { "question": "What is the binary for /28 increment?", "answer": "16 (00010000)", "difficulty": "hard" },
+            { "question": "Optimal summary for routes 10.0.0.0/23, 10.0.2.0/23, 10.0.4.0/23.", "answer": "The first two summarize to 10.0.0.0/22. The third is separate. To cover all three, 10.0.0.0/21 is the smallest summary.", "difficulty": "hard" },
+            { "question": "VLSM for 10 point-to-point links and 2 LANs of 500 hosts in /20.", "answer": "LANs get /23 each. Then 10 /30 subnets for the links.", "difficulty": "hard" },
+            { "question": "The prefix for mask 255.248.0.0.", "answer": "/13", "difficulty": "hard" },
+            { "question": "Advanced subnet calc: IP 172.16.254.129/23 network and broadcast.", "answer": "Network: 172.16.254.0, Broadcast: 172.16.255.255", "difficulty": "hard" },
+            { "question": "Supernet calculation for 8 contiguous /23 networks.", "answer": "/20", "difficulty": "hard" },
+            { "question": "Allocate VLSM blocks for VLANs 10,20,30 hosts in 192.168.100.0/24.", "answer": "30 hosts needs /27 (30 usable). 20 hosts needs /27. 10 hosts needs /28. Allocate sequentially: .0/27, .32/27, .64/28.", "difficulty": "hard" },
+            { "question": "Find LPM in routing table for 192.0.2.5 with entries /24 192.0.2.0, /23 192.0.0.0.", "answer": "/24", "difficulty": "hard" },
+            { "question": "The wildcard mask for matching /29 subnets.", "answer": "0.0.0.7", "difficulty": "hard" },
+            { "question": "Design supernet for regional offices 10.20.0.0/20 to 10.27.0.0/20.", "answer": "Not possible to cleanly summarize this range.", "difficulty": "hard" },
+            { "question": "VLSM for security zones: high /26, medium /27, low /28 in /24.", "answer": "High: .0/26, Med: .64/27, Low: .96/28", "difficulty": "hard" },
+            { "question": "Calculate the number of /32 addresses in a /16.", "answer": "65536", "difficulty": "hard" },
+            { "question": "Binary to decimal for subnet calc: 11111000.", "answer": "248", "difficulty": "hard" },
+            { "question": "The mask for 2^8 subnets in Class B.", "answer": "/24 (16+8)", "difficulty": "hard" }
+        ];
 
-        const flashcardData = {
-            easy: [
-                { q: "What is the broadcast address for the 192.168.1.0 /24 network?", a: "192.168.1.255" },
-                { q: "How many usable host addresses are in a /24 network?", a: "254" },
-                { q: "What is the default subnet mask for a Class C network?", a: "255.255.255.0" },
-                { q: "Is 10.1.2.3 a private or public IP address?", a: "Private" },
-                { q: "What is the network address for the host 172.16.10.5 /24?", a: "172.16.10.0" },
-                { q: "How many total IP addresses are in a /16 network?", a: "65,536" },
-                { q: "What is the CIDR notation for the subnet mask 255.255.255.0?", a: "/24" },
-                { q: "What is the first usable host IP for the 192.168.5.0 /24 network?", a: "192.168.5.1" },
-                { q: "What is the last usable host IP for the 10.0.0.0 /8 network?", a: "10.255.255.254" },
-                { q: "Which IP class does 150.10.20.30 belong to?", a: "Class B" },
-                { q: "What is the purpose of the 127.0.0.1 address?", a: "Loopback address" },
-                { q: "What is the wildcard mask for a /24 subnet?", a: "0.0.0.255" },
-                { q: "What is the CIDR notation for the subnet mask 255.255.0.0?", a: "/16" },
-                { q: "Is 192.168.0.15 a private or public IP address?", a: "Private" },
-                { q: "How many usable host addresses are in a /30 network?", a: "2" },
-                { q: "What is the default subnet mask for a Class A network?", a: "255.0.0.0" },
-                { q: "What is the network address for the host 200.100.50.25 /24?", a: "200.100.50.0" },
-                { q: "How many bits are in an IPv4 address?", a: "32 bits" },
-            ],
-            medium: [
-                { q: "What is the subnet mask for a /27 network?", a: "255.255.255.224" },
-                { q: "What is the network address for the host 172.16.50.100 /22?", a: "172.16.48.0" },
-                { q: "How many subnets and usable hosts per subnet can you get from 192.168.1.0 /24 if you subnet it to /28?", a: "16 subnets, 14 hosts" },
-                { q: "What is the broadcast address for the IP 10.10.10.70 /26?", a: "10.10.10.127" },
-                { q: "What is the last usable host for the network 192.168.100.192 /27?", a: "192.168.100.222" },
-                { q: "What is the wildcard mask for the subnet mask 255.255.255.240?", a: "0.0.0.15" },
-                { q: "What CIDR block does the IP 172.20.127.50 /18 belong to?", a: "172.20.64.0 /18" },
-                { q: "How many usable host addresses are there in a /21 network?", a: "2,046" },
-                { q: "What is the subnet mask for a /19 network?", a: "255.255.224.0" },
-                { q: "What is the block size of a /26 network?", a: "64" },
-                { q: "What is the first usable host for the network 10.1.80.0 /20?", a: "10.1.80.1" },
-                { q: "What is the broadcast address for the network 192.168.30.128 /25?", a: "192.168.30.255" },
-                { q: "What is the CIDR notation for the subnet mask 255.255.240.0?", a: "/20" },
-                { q: "Is 172.32.1.1 a private or public IP address?", a: "Public" },
-                { q: "What is the 3rd valid subnet of 192.168.0.0/24 if you subnet it into /27s?", a: "192.168.0.64 /27" },
-                { q: "How many /27 subnets can you create from a /24 network?", a: "8" },
-                { q: "What is the network address for the host 10.100.127.200 /17?", a: "10.100.0.0" },
-                { q: "What is the wildcard mask for a /22 subnet?", a: "0.0.3.255" },
-            ],
-            hard: [
-                { q: "You need to create a subnet that supports at least 500 hosts. What is the smallest CIDR prefix you can use?", a: "/23 (510 usable hosts)" },
-                { q: "What is the 5th subnet for 10.0.0.0 /8 when it is subnetted to a /12?", a: "10.64.0.0 /12" },
-                { q: "What is the network address for the host 172.31.189.55 /21?", a: "172.31.184.0" },
-                { q: "What is the wildcard mask for a /19 network?", a: "0.0.31.255" },
-                { q: "An IP address is 198.51.100.113 and its mask is 255.255.255.224. What is its broadcast address?", a: "198.51.100.127" },
-                { q: "How many /30 subnets can be created from a single /24 network block?", a: "64" },
-                { q: "A router has an ACL entry: 'permit 192.168.16.0 0.0.7.255'. What range of IP addresses does this permit?", a: "192.168.16.0 to 192.168.23.255" },
-                { q: "Summarize these two routes into a single route: 172.16.16.0/24 and 172.16.17.0/24", a: "172.16.16.0/23" },
-                { q: "What is the last valid host of the 10th /28 subnet within the 192.168.1.0/24 network?", a: "192.168.1.158" },
-                { q: "For a network that needs to support 1000 users, what is the most efficient CIDR prefix?", a: "/22" },
-                { q: "What is the purpose of RFC 3021 in relation to subnetting?", a: "It allows the use of /31 subnets for point-to-point links." },
-                { q: "What is the binary representation of the 3rd octet of a /19 subnet mask?", a: "11100000" },
-                { q: "A host has an IP of 10.20.30.40. Its gateway is 10.20.16.1. What is a possible subnet mask for this network?", a: "/20 (or anything less than /21)" },
-                { q: "How many total IP addresses are available in the entire 172.16.0.0/12 private range?", a: "1,048,576 (2^20)" },
-                { q: "Summarize these four routes: 10.0.8.0/24, 10.0.9.0/24, 10.0.10.0/24, 10.0.11.0/24", a: "10.0.8.0/22" },
-                { q: "You are given the network 192.168.100.0/24. You need to create 6 subnets. What is the new subnet mask and how many hosts per subnet?", a: "Mask: /27 (255.255.255.224), Hosts: 30" }
-            ]
-        };
+        // Main Application Logic
+        let currentTab = 'practice';
+        let currentPracticeDifficulty = 'easy';
+        let currentWildcardDifficulty = 'easy';
+        let isDarkMode = false;
+        let practiceAnswers = null;
+        let wildcardAnswers = null;
+        let lastFocusedElement;
+        
+        // Flashcard State
+        let currentFlashcardDifficulty = 'easy';
+        let currentFlashcard = null;
+        let isFlashcardRevealed = false;
 
         document.addEventListener('DOMContentLoaded', () => {
-            let lastFocusedElement;
-            let practiceAnswers, wildcardAnswers;
-            let currentPracticeDifficulty = 'easy', currentWildcardDifficulty = 'easy';
-            let isFlashcardInitialized = false, currentFlashcardDifficulty = 'easy';
+          init();
+          loadTheme();
+          setupEventListeners();
+          updateCalculator();
+        });
 
-            function normalizeIp(ip) {
-                if (!SubnetMath.isValidIp(ip)) return null;
-                return SubnetMath.numberToIp(SubnetMath.ipToNumber(ip));
-            }
+        function init() {
+          generatePracticeProblem();
+          generateWildcardProblem();
+          setFlashcardDifficulty('easy');
+        }
 
-            // --- Theme ---
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIconLight = document.getElementById('theme-icon-light');
-            const themeIconDark = document.getElementById('theme-icon-dark');
-            const applyTheme = (theme) => {
-                if (theme === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    themeIconLight.classList.add('hidden');
-                    themeIconDark.classList.remove('hidden');
-                } else {
-                    document.body.classList.remove('dark-mode');
-                    themeIconLight.classList.remove('hidden');
-                    themeIconDark.classList.add('hidden');
-                }
-            };
-            themeToggle.addEventListener('click', () => {
-                const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
-                localStorage.setItem('theme', newTheme);
-                applyTheme(newTheme);
-            });
-            applyTheme(localStorage.getItem('theme') || 'light');
-            
-            // --- Modals ---
-            function openModal(modalId, opener) {
-                lastFocusedElement = opener || document.activeElement;
-                const modal = document.getElementById(modalId);
-                if (!modal) return;
-                modal.dataset.openerId = opener ? opener.id : '';
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                modal.setAttribute('aria-hidden', 'false');
-                if (opener) opener.setAttribute('aria-expanded', 'true');
-                const focusable = Array.from(modal.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
-                if (focusable.length > 0) {
-                    const first = focusable[0], last = focusable[focusable.length - 1];
-                    const trapFocus = e => {
-                        if (e.key !== 'Tab') return;
-                        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } 
-                        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-                    };
-                    modal.addEventListener('keydown', trapFocus);
-                    modal.trapFocusListener = trapFocus;
-                }
-                document.addEventListener('keydown', handleEscapeKey);
-                modal.querySelector('button[id$="-close"]')?.focus();
-            }
+        // --- Modal Logic ---
+        function openModal(modalId) {
+            lastFocusedElement = document.activeElement;
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            modal.addEventListener('click', handleModalOverlayClick);
+            document.addEventListener('keydown', handleEscapeKey);
+            modal.querySelector('button[id$="-close"]')?.focus();
+        }
 
-            function closeModal() {
-                const modal = document.querySelector('.fixed.inset-0.flex:not(.hidden)');
-                if (!modal) return;
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                modal.setAttribute('aria-hidden', 'true');
-                const opener = document.getElementById(modal.dataset.openerId);
-                if (opener) opener.setAttribute('aria-expanded', 'false');
+        function closeModal() {
+            const openModal = document.querySelector('.fixed.inset-0.flex:not(.hidden)');
+            if (openModal) {
+                openModal.classList.add('hidden');
+                openModal.classList.remove('flex');
+                openModal.removeEventListener('click', handleModalOverlayClick);
                 document.removeEventListener('keydown', handleEscapeKey);
-                if (modal.trapFocusListener) modal.removeEventListener('keydown', modal.trapFocusListener);
                 lastFocusedElement?.focus();
             }
+        }
 
-            const handleEscapeKey = e => { if (e.key === 'Escape') closeModal(); };
-            document.getElementById('help-button').addEventListener('click', e => openModal('help-modal', e.currentTarget));
-            document.getElementById('calc-list-subnets').addEventListener('click', e => {
-                listSubnets();
-                openModal('subnet-list-modal', e.currentTarget);
-            });
-            document.querySelectorAll('[id$="-close"]').forEach(btn => btn.addEventListener('click', closeModal));
-            
-            // --- Tabs ---
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabButtons.forEach(btn => btn.addEventListener('click', e => {
-                const targetTab = e.currentTarget.dataset.tab;
-                tabButtons.forEach(b => {
-                    const isSelected = b.dataset.tab === targetTab;
-                    b.classList.toggle('tab-active', isSelected);
-                    b.setAttribute('aria-selected', String(isSelected));
-                    b.setAttribute('tabindex', isSelected ? '0' : '-1');
-                });
-                tabContents.forEach(panel => {
-                    const isHidden = panel.id !== `${targetTab}-tab-content`;
-                    panel.classList.toggle('hidden', isHidden);
-                    panel.setAttribute('aria-hidden', String(isHidden));
-                });
-                if (targetTab === 'flashcards' && !isFlashcardInitialized) initFlashcards();
-            }));
-
-            // --- Calculator ---
-            const calcIp = document.getElementById('calc-ip'), calcCidr = document.getElementById('calc-cidr');
-            const updateCalculator = () => {
-                const ip = calcIp.value.trim();
-                const cidr = parseInt(calcCidr.value, 10);
-                if (!SubnetMath.isValidIp(ip) || isNaN(cidr)) return;
-                const info = SubnetMath.getSubnetInfo(ip, cidr);
-                if (!info) return;
-                document.getElementById('calc-class').textContent = `Class ${info.ipClass}`;
-                document.getElementById('calc-subnets').textContent = info.totalHosts < 1 ? 0 : Math.pow(2, cidr - ({A:8,B:16,C:24}[info.ipClass] || cidr));
-                document.getElementById('calc-hostbits').textContent = 32 - cidr;
-                document.getElementById('calc-totalhosts').textContent = info.totalHosts.toLocaleString();
-                document.getElementById('calc-usablehosts').textContent = info.usableHosts.toLocaleString();
-                document.getElementById('calc-network').textContent = info.network;
-                document.getElementById('calc-mask').textContent = info.mask;
-                document.getElementById('calc-wildcard').textContent = info.wildcard;
-                document.getElementById('calc-firsthost').textContent = info.firstHost;
-                document.getElementById('calc-lasthost').textContent = info.lastHost;
-                document.getElementById('calc-broadcast').textContent = info.broadcast;
-                document.getElementById('calc-binary-ip').textContent = SubnetMath.numberToBinary(SubnetMath.ipToNumber(ip));
-                document.getElementById('calc-binary-mask').textContent = SubnetMath.numberToBinary(SubnetMath.ipToNumber(info.mask));
-                document.getElementById('calc-binary-network').textContent = SubnetMath.numberToBinary(SubnetMath.ipToNumber(info.network));
-            };
-            [calcIp, calcCidr].forEach(el => el.addEventListener('input', updateCalculator));
-
-            document.getElementById('calc-binary-toggle').addEventListener('click', e => {
-                const binaryDiv = document.getElementById('calc-binary');
-                const isHidden = binaryDiv.classList.toggle('hidden');
-                e.currentTarget.setAttribute('aria-expanded', String(!isHidden));
-                e.currentTarget.textContent = isHidden ? 'Show Binary Breakdown' : 'Hide Binary Breakdown';
-            });
-
-            const navigateSubnet = (direction) => {
-                const ip = calcIp.value;
-                const cidr = parseInt(calcCidr.value, 10);
-                const info = SubnetMath.getSubnetInfo(ip, cidr);
-                if (!info) return;
-                const networkNum = SubnetMath.ipToNumber(info.network);
-                const nextNetworkNum = networkNum + (direction * info.totalHosts);
-                if (nextNetworkNum >= 0 && nextNetworkNum < Math.pow(2, 32)) {
-                    calcIp.value = SubnetMath.numberToIp(nextNetworkNum);
-                    updateCalculator();
-                }
-            };
-            document.getElementById('calc-prev').addEventListener('click', () => navigateSubnet(-1));
-            document.getElementById('calc-next').addEventListener('click', () => navigateSubnet(1));
-            
-            function listSubnets() {
-              const ip = calcIp.value.trim();
-              const cidr = parseInt(calcCidr.value, 10);
-              const info = SubnetMath.getSubnetInfo(ip, cidr);
-              if (!info) { document.getElementById('subnet-list-content').innerHTML = '<p>Invalid input.</p>'; return; }
-              const classCidr = {A:8,B:16,C:24}[info.ipClass] || cidr;
-              const baseNetworkNum = SubnetMath.ipToNumber(SubnetMath.getSubnetInfo(ip, classCidr).network);
-              const totalSubnets = Math.pow(2, cidr - classCidr);
-              let html = '<div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">';
-              for (let i = 0; i < Math.min(totalSubnets, 256); i++) {
-                const currentNetworkNum = baseNetworkNum + (i * info.totalHosts);
-                const currentSubnetInfo = SubnetMath.getSubnetInfo(SubnetMath.numberToIp(currentNetworkNum), cidr);
-                html += `<div><strong>${currentSubnetInfo.network}</strong>: ${currentSubnetInfo.firstHost} - ${currentSubnetInfo.lastHost}</div>`;
-              }
-              if (totalSubnets > 256) html += `<div>...and ${totalSubnets-256} more subnets.</div>`;
-              html += '</div>';
-              document.getElementById('subnet-list-content').innerHTML = html;
+        function handleModalOverlayClick(event) {
+            if (event.target === event.currentTarget) {
+                closeModal();
             }
+        }
 
-            // --- Practice Mode ---
-            const practiceIp = document.getElementById('practice-ip'), practiceCidr = document.getElementById('practice-cidr');
-            const practiceInputs = document.querySelectorAll('.practice-input');
-            const generatePracticeProblem = () => {
-                const octet = () => Math.floor(Math.random() * 256);
-                const ip = `${octet()}.${octet()}.${octet()}.${octet()}`;
-                let cidr;
-                if (currentPracticeDifficulty === 'easy') cidr = [8, 16, 24][Math.floor(Math.random() * 3)];
-                else if (currentPracticeDifficulty === 'medium') cidr = Math.floor(Math.random() * (28 - 18 + 1)) + 18;
-                else cidr = Math.floor(Math.random() * (30 - 8 + 1)) + 8;
-                
-                practiceAnswers = SubnetMath.getSubnetInfo(ip, cidr);
-                if (!practiceAnswers) { generatePracticeProblem(); return; }
-
-                practiceIp.value = practiceAnswers.network;
-                practiceCidr.value = cidr;
-
-                practiceInputs.forEach(input => {
-                    input.value = '';
-                    input.classList.remove('field-correct', 'field-incorrect');
-                    input.closest('.flex').querySelector('.status-icon').innerHTML = '';
-                    input.closest('.flex').querySelector('.check-btn').classList.add('hidden');
-                });
-                document.getElementById('practice-stats').classList.add('hidden');
-            };
-
-            const checkPracticeField = (field) => {
-                if (!practiceAnswers) return;
-                const input = document.querySelector(`.practice-input[data-field="${field}"]`);
-                const user = normalizeIp(input.value.trim());
-                const correct = normalizeIp(practiceAnswers[field]);
-                const isCorrect = user !== null && user === correct;
-
-                input.classList.toggle('field-correct', isCorrect);
-                input.classList.toggle('field-incorrect', !isCorrect);
-                const statusEl = input.closest('.flex').querySelector('.status-icon');
-                statusEl.innerHTML = isCorrect ? '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Correct</span>' : '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Incorrect</span>';
-            };
-            
-            document.getElementById('practice-tab-content').addEventListener('click', e => {
-                if (e.target.classList.contains('show-btn')) document.querySelector(`.practice-input[data-field="${e.target.dataset.field}"]`).value = practiceAnswers[e.target.dataset.field];
-                if (e.target.classList.contains('check-btn')) checkPracticeField(e.target.dataset.field);
-            });
-            document.getElementById('practice-new-btn').addEventListener('click', generatePracticeProblem);
-            document.getElementById('practice-show-all').addEventListener('click', () => practiceInputs.forEach(i => i.value = practiceAnswers[i.dataset.field]));
-            document.getElementById('practice-check-all').addEventListener('click', () => {
-                practiceInputs.forEach(i => checkPracticeField(i.dataset.field));
-                document.getElementById('stats-class').textContent = practiceAnswers.ipClass;
-                document.getElementById('stats-mask').textContent = practiceAnswers.mask;
-                document.getElementById('stats-hosts').textContent = practiceAnswers.usableHosts.toLocaleString();
-                document.getElementById('practice-stats').classList.remove('hidden');
-            });
-            practiceInputs.forEach(input => input.addEventListener('input', e => e.target.closest('.flex').querySelector('.check-btn').classList.remove('hidden')));
-            
-            const setPracticeDifficulty = (difficulty) => {
-                currentPracticeDifficulty = difficulty;
-                document.querySelectorAll('.difficulty-btn').forEach(btn => {
-                    const isActive = btn.dataset.difficulty === difficulty;
-                    btn.classList.toggle('border-blue-600', isActive);
-                    btn.classList.toggle('bg-blue-600', isActive);
-                    btn.classList.toggle('text-white', isActive);
-                    btn.classList.toggle('border-gray-300', !isActive);
-                    btn.classList.toggle('text-gray-700', !isActive);
-                    btn.setAttribute('aria-checked', isActive);
-                    btn.setAttribute('tabindex', isActive ? '0' : '-1');
-                });
-                document.getElementById('difficulty-desc').textContent = {
-                    easy: 'Standard subnets (/24, /16, /8) - Perfect for beginners',
-                    medium: 'Intermediate subnets (/18 to /28) - Good for practice',
-                    hard: 'Any valid subnet mask (/8 to /30) - For the experts'
-                }[difficulty];
-                generatePracticeProblem();
-            };
-            document.querySelectorAll('.difficulty-btn').forEach(btn => btn.addEventListener('click', e => setPracticeDifficulty(e.currentTarget.dataset.difficulty)));
-
-
-            // --- Wildcard Mode ---
-            const wildcardIp = document.getElementById('wildcard-ip'), wildcardCidr = document.getElementById('wildcard-cidr');
-            const wildcardInputs = document.querySelectorAll('.wildcard-input');
-            const generateWildcardProblem = () => {
-                const octet = () => Math.floor(Math.random() * 256);
-                let ip = `${octet()}.${octet()}.${octet()}.0`;
-                let cidr;
-                if (currentWildcardDifficulty === 'easy') cidr = [16, 24, 25, 26, 27][Math.floor(Math.random() * 5)];
-                else if (currentWildcardDifficulty === 'medium') cidr = Math.floor(Math.random() * (28 - 18 + 1)) + 18;
-                else cidr = Math.floor(Math.random() * (30 - 8 + 1)) + 8;
-
-                wildcardAnswers = SubnetMath.getSubnetInfo(ip, cidr);
-                if (!wildcardAnswers) { generateWildcardProblem(); return; }
-
-                wildcardIp.value = wildcardAnswers.network;
-                wildcardCidr.value = cidr;
-
-                wildcardInputs.forEach(input => {
-                    input.value = '';
-                    input.classList.remove('field-correct', 'field-incorrect');
-                    input.closest('.flex').querySelector('.status-icon').innerHTML = '';
-                    input.closest('.flex').querySelector('.wildcard-check-btn').classList.add('hidden');
-                });
-                document.getElementById('wildcard-reference').classList.add('hidden');
-            };
-
-            function checkWildcardField(field) {
-                if (!wildcardAnswers) return;
-                const input = document.querySelector(`#wildcard-tab-content .wildcard-input[data-field="${field}"]`);
-                let isCorrect;
-                if (field === 'totalHosts') {
-                    const userNum = Number(String(input.value || '').replace(/[^\d-]/g, ''));
-                    const correctNum = Number(wildcardAnswers[field]);
-                    isCorrect = !Number.isNaN(userNum) && userNum === correctNum;
-                } else { 
-                    const userIp = normalizeIp(input.value);
-                    const correctIp = normalizeIp(wildcardAnswers[field]);
-                    isCorrect = userIp !== null && userIp === correctIp;
-                }
-
-                const statusEl = input.closest('.flex').querySelector('.status-icon');
-                input.classList.toggle('field-correct', isCorrect);
-                input.classList.toggle('field-incorrect', !isCorrect);
-                statusEl.innerHTML = isCorrect ? '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Correct</span>' : '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Incorrect</span>';
+        function handleEscapeKey(event) {
+            if (event.key === 'Escape') {
+                closeModal();
             }
-            
-            document.getElementById('wildcard-tab-content').addEventListener('click', e => {
-                const field = e.target.closest('[data-field]')?.dataset.field;
-                if (e.target.classList.contains('wildcard-show-btn')) document.querySelector(`.wildcard-input[data-field="${field}"]`).value = wildcardAnswers[field].toLocaleString();
-                if (e.target.classList.contains('wildcard-check-btn')) checkWildcardField(field);
+        }
+        
+        function setupEventListeners() {
+          document.querySelectorAll('.tab-button').forEach(btn => btn.addEventListener('click', (e) => switchTab(e.currentTarget.dataset.tab)));
+          document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+          document.getElementById('help-button').addEventListener('click', () => openModal('help-modal'));
+          document.getElementById('help-close').addEventListener('click', closeModal);
+          document.getElementById('subnet-list-close').addEventListener('click', closeModal);
+          setupPracticeMode();
+          setupWildcardMode();
+          setupCalculatorMode();
+          setupFlashcardsMode();
+        }
+
+        function setupPracticeMode() {
+          document.querySelectorAll('.difficulty-btn').forEach(btn => btn.addEventListener('click', (e) => setPracticeDifficulty(e.currentTarget.dataset.difficulty)));
+          document.getElementById('practice-new-btn').addEventListener('click', generatePracticeProblem);
+          document.querySelectorAll('#practice-tab-content .practice-field').forEach(fieldEl => {
+              const field = fieldEl.querySelector('.practice-input').dataset.field;
+              fieldEl.querySelector('.check-btn').addEventListener('click', () => checkPracticeField(field));
+              fieldEl.querySelector('.show-btn').addEventListener('click', () => showPracticeAnswer(field));
+          });
+          document.querySelectorAll('.practice-input').forEach(input => {
+            input.addEventListener('input', (e) => {
+              const field = e.target.dataset.field;
+              const parent = e.target.closest('.practice-field');
+              const checkBtn = parent.querySelector('.check-btn');
+              if (e.target.value.trim()) checkBtn.classList.remove('hidden');
+              else checkBtn.classList.add('hidden');
+              e.target.classList.remove('field-correct', 'field-incorrect');
+              parent.querySelector('.status-icon').innerHTML = '';
             });
+          });
+          document.getElementById('practice-show-all').addEventListener('click', showAllPracticeAnswers);
+          document.getElementById('practice-check-all').addEventListener('click', checkAllPracticeAnswers);
+        }
+
+        function setupWildcardMode() {
+            document.querySelectorAll('.wildcard-difficulty-btn').forEach(btn => btn.addEventListener('click', (e) => setWildcardDifficulty(e.currentTarget.dataset.difficulty)));
             document.getElementById('wildcard-new-btn').addEventListener('click', generateWildcardProblem);
-            document.getElementById('wildcard-show-all').addEventListener('click', () => wildcardInputs.forEach(i => i.value = wildcardAnswers[i.dataset.field].toLocaleString()));
-            document.getElementById('wildcard-check-all').addEventListener('click', () => {
-                wildcardInputs.forEach(i => checkWildcardField(i.dataset.field));
-                document.getElementById('wildcard-ref-mask').textContent = wildcardAnswers.mask;
-                document.getElementById('wildcard-ref-network').textContent = wildcardAnswers.network;
-                document.getElementById('wildcard-ref-broadcast').textContent = wildcardAnswers.broadcast;
-                document.getElementById('wildcard-reference').classList.remove('hidden');
-            });
-            wildcardInputs.forEach(input => input.addEventListener('input', e => e.target.closest('.flex').querySelector('.wildcard-check-btn').classList.remove('hidden')));
-            
-            const setWildcardDifficulty = (difficulty) => {
-                currentWildcardDifficulty = difficulty;
-                document.querySelectorAll('.wildcard-difficulty-btn').forEach(btn => {
-                    const isActive = btn.dataset.difficulty === difficulty;
-                    btn.classList.toggle('border-blue-600', isActive);
-                    btn.classList.toggle('bg-blue-600', isActive);
-                    btn.classList.toggle('text-white', isActive);
-                    btn.classList.toggle('border-gray-300', !isActive);
-                    btn.classList.toggle('text-gray-700', !isActive);
-                    btn.setAttribute('aria-checked', isActive);
-                    btn.setAttribute('tabindex', isActive ? '0' : '-1');
+            document.querySelectorAll('#wildcard-tab-content .wildcard-input').forEach(input => {
+                const field = input.dataset.field;
+                const parent = input.closest('.flex');
+                const checkBtn = parent.querySelector('.wildcard-check-btn');
+                const showBtn = parent.querySelector('.wildcard-show-btn');
+                if (checkBtn) checkBtn.addEventListener('click', () => checkWildcardField(field));
+                if (showBtn) showBtn.addEventListener('click', () => showWildcardAnswer(field));
+                input.addEventListener('input', (e) => {
+                    if (checkBtn) {
+                        if (e.target.value.trim()) checkBtn.classList.remove('hidden');
+                        else checkBtn.classList.add('hidden');
+                    }
+                    e.target.classList.remove('field-correct', 'field-incorrect');
+                    parent.querySelector('.status-icon').innerHTML = '';
                 });
-                document.getElementById('wildcard-difficulty-desc').textContent = {
-                    easy: 'Common CIDRs for ACLs (/24, /25, /26, etc.)',
-                    medium: 'Intermediate CIDRs (/18 to /28)',
-                    hard: 'Any valid CIDR (/8 to /30)'
-                }[difficulty];
-                generateWildcardProblem();
+            });
+            document.getElementById('wildcard-show-all').addEventListener('click', showAllWildcardAnswers);
+            document.getElementById('wildcard-check-all').addEventListener('click', checkAllWildcardAnswers);
+        }
+
+        function setupCalculatorMode() {
+          const ipInput = document.getElementById('calc-ip');
+          const cidrInput = document.getElementById('calc-cidr');
+          ipInput.addEventListener('input', updateCalculator);
+          cidrInput.addEventListener('input', updateCalculator);
+          document.getElementById('calc-prev').addEventListener('click', () => {
+            const info = getCalculatorInfo();
+            if (info) {
+              const prev = SubnetMath.getPreviousSubnet(info.network, info.cidr);
+              ipInput.value = prev;
+              updateCalculator();
+            }
+          });
+          document.getElementById('calc-list-subnets').addEventListener('click', () => {
+              const info = getCalculatorInfo();
+              if (info) {
+                  showSubnetList(info);
+                  openModal('subnet-list-modal');
+              } else {
+                  alert('Please enter a valid IP address and CIDR mask first.');
+              }
+          });
+          document.getElementById('calc-next').addEventListener('click', () => {
+            const info = getCalculatorInfo();
+            if (info) {
+              const next = SubnetMath.getNextSubnet(info.network, info.cidr);
+              ipInput.value = next;
+              updateCalculator();
+            }
+          });
+          document.getElementById('calc-binary-toggle').addEventListener('click', (e) => {
+            const binaryDiv = document.getElementById('calc-binary');
+            const isHidden = binaryDiv.classList.toggle('hidden');
+            const isExpanded = !isHidden;
+            e.currentTarget.textContent = isHidden ? 'Show Binary Breakdown' : 'Hide Binary Breakdown';
+            e.currentTarget.setAttribute('aria-expanded', isExpanded);
+          });
+        }
+        
+        function setupFlashcardsMode() {
+            document.querySelectorAll('.fc-difficulty-button').forEach(btn => {
+                btn.addEventListener('click', () => setFlashcardDifficulty(btn.dataset.difficulty));
+            });
+            document.getElementById('fc-reveal-btn').addEventListener('click', handleRevealFlashcard);
+            document.getElementById('fc-next-btn').addEventListener('click', handleNextFlashcard);
+        }
+
+        function switchTab(tab) {
+          currentTab = tab;
+          document.querySelectorAll('.tab-button').forEach(btn => {
+            const isSelected = btn.dataset.tab === tab;
+            btn.classList.toggle('tab-active', isSelected);
+            btn.classList.toggle('text-gray-500', !isSelected);
+            btn.classList.toggle('border-transparent', !isSelected);
+            btn.setAttribute('aria-selected', isSelected);
+            btn.setAttribute('tabindex', isSelected ? '0' : '-1');
+          });
+          document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+          document.getElementById(`${tab}-tab-content`).classList.remove('hidden');
+        }
+
+        function setPracticeDifficulty(difficulty) {
+          currentPracticeDifficulty = difficulty;
+          document.querySelectorAll('.difficulty-btn').forEach(btn => {
+            const isActive = btn.dataset.difficulty === difficulty;
+            btn.classList.toggle('border-blue-600', isActive);
+            btn.classList.toggle('bg-blue-600', isActive);
+            btn.classList.toggle('text-white', isActive);
+            btn.classList.toggle('border-gray-300', !isActive);
+            btn.classList.toggle('text-gray-700', !isActive);
+            btn.setAttribute('aria-checked', isActive);
+          });
+          const descriptions = {
+            easy: 'Standard subnets (/24, /16) - Perfect for beginners',
+            medium: 'Variable subnets (/20-/27) - Building confidence',
+            hard: 'Complex subnets (/18-/30) - Master level'
+          };
+          document.getElementById('difficulty-desc').textContent = descriptions[difficulty];
+          generatePracticeProblem();
+        }
+
+        function setWildcardDifficulty(difficulty) {
+            currentWildcardDifficulty = difficulty;
+            document.querySelectorAll('.wildcard-difficulty-btn').forEach(btn => {
+                const isActive = btn.dataset.difficulty === difficulty;
+                btn.classList.toggle('border-blue-600', isActive);
+                btn.classList.toggle('bg-blue-600', isActive);
+                btn.classList.toggle('text-white', isActive);
+                btn.classList.toggle('border-gray-300', !isActive);
+                btn.classList.toggle('text-gray-700', !isActive);
+                btn.setAttribute('aria-checked', isActive);
+            });
+            const descriptions = {
+                easy: 'Standard subnets (/24, /16) - Perfect for beginners',
+                medium: 'Variable subnets (/20-/27) - Building confidence',
+                hard: 'Complex subnets (/18-/30) - Master level'
             };
-            document.querySelectorAll('.wildcard-difficulty-btn').forEach(btn => btn.addEventListener('click', e => setWildcardDifficulty(e.currentTarget.dataset.difficulty)));
-
-            // --- Radio Group Keyboard Navigation ---
-            document.querySelectorAll('[role="radiogroup"]').forEach(rg => {
-              rg.addEventListener('keydown', e => {
-                if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
-                e.preventDefault();
-                const radios = Array.from(rg.querySelectorAll('[role="radio"]'));
-                let activeIndex = radios.findIndex(r => r.getAttribute('tabindex') === '0');
-                if (activeIndex === -1) activeIndex = 0;
-                const dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : -1;
-                const nextIndex = (activeIndex + dir + radios.length) % radios.length;
-                radios[nextIndex].click();
-                radios[nextIndex].focus();
-              });
-            });
-
-            // --- Flashcards ---
-            const fcContainer = document.getElementById('fc-container');
-            const fcRevealBtn = document.getElementById('fc-reveal-btn');
-            const fcNextBtn = document.getElementById('fc-next-btn');
-            let currentFcIndex = -1, isFcRevealed = false;
-            
-            function loadFlashcard() {
-                const cards = flashcardData[currentFlashcardDifficulty];
-                if (!cards || cards.length === 0) {
-                    fcContainer.innerHTML = `<div class="fc-placeholder">No cards available.</div>`;
-                    return;
-                }
-                currentFcIndex = Math.floor(Math.random() * cards.length);
-                const card = cards[currentFcIndex];
-                
-                fcContainer.innerHTML = `
-                    <div class="fc-inner">
-                        <div class="fc-card-face fc-card-front">${card.q}</div>
-                        <div class="fc-card-face fc-card-back">${card.a}</div>
-                    </div>
-                `;
-                isFcRevealed = false;
-                fcRevealBtn.disabled = false;
-                fcNextBtn.disabled = true;
-                fcRevealBtn.classList.remove('revealed-state');
-                fcRevealBtn.innerHTML = `Reveal <svg xmlns="http://www.w3.org/2000/svg" class="fc-icon fc-icon-right" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C3.732 4.943 9.522 3 10 3s6.268 1.943 9.542 7c-3.274 5.057-9.064 7-9.542 7S3.732 15.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>`;
-            }
-
-            function initFlashcards() {
-                document.querySelectorAll('.fc-difficulty-button').forEach(btn => {
-                    btn.addEventListener('click', e => {
-                        currentFlashcardDifficulty = e.target.dataset.difficulty;
-                        document.querySelectorAll('.fc-difficulty-button').forEach(b => b.classList.remove('active', 'easy', 'medium', 'hard'));
-                        e.target.classList.add('active', currentFlashcardDifficulty);
-                        loadFlashcard();
-                    });
-                });
-                document.querySelector('.fc-difficulty-button.easy').click();
-                isFlashcardInitialized = true;
-            }
-
-            fcRevealBtn.addEventListener('click', () => {
-                if (!isFcRevealed) {
-                    fcContainer.querySelector('.fc-inner').classList.add('is-revealed');
-                    isFcRevealed = true;
-                    fcRevealBtn.disabled = true;
-                    fcNextBtn.disabled = false;
-                    fcRevealBtn.classList.add('revealed-state');
-                    fcRevealBtn.innerHTML = `Revealed`;
-                    setTimeout(() => { fcRevealBtn.disabled = false; }, 700); // Prevent spamming
-                }
-            });
-            fcNextBtn.addEventListener('click', () => {
-                fcContainer.querySelector('.fc-inner').classList.remove('is-revealed');
-                setTimeout(loadFlashcard, 350);
-            });
-
-            // --- INITIALIZATION ---
-            updateCalculator();
-            generatePracticeProblem();
+            document.getElementById('wildcard-difficulty-desc').textContent = descriptions[difficulty];
             generateWildcardProblem();
-        });
+        }
+
+        function generatePracticeProblem() {
+          const problem = SubnetMath.generateRandomIp(currentPracticeDifficulty);
+          document.getElementById('practice-ip').value = problem.ip;
+          document.getElementById('practice-cidr').value = problem.cidr;
+          practiceAnswers = SubnetMath.calculateSubnetInfo(problem.ip, problem.cidr);
+          document.querySelectorAll('.practice-input').forEach(input => {
+            input.value = '';
+            input.classList.remove('field-correct', 'field-incorrect');
+          });
+          document.querySelectorAll('.practice-field .status-icon').forEach(icon => icon.innerHTML = '');
+          document.querySelectorAll('.check-btn').forEach(btn => btn.classList.add('hidden'));
+          document.querySelectorAll('.practice-field .show-btn').forEach(btn => btn.classList.remove('hidden'));
+          if(practiceAnswers) {
+            document.getElementById('practice-stats').classList.remove('hidden');
+            document.getElementById('stats-class').textContent = practiceAnswers.classType;
+            document.getElementById('stats-mask').textContent = practiceAnswers.mask;
+            document.getElementById('stats-hosts').textContent = practiceAnswers.usableHosts;
+          } else {
+             document.getElementById('practice-stats').classList.add('hidden');
+          }
+        }
+
+        function checkPracticeField(field) {
+          if (!practiceAnswers) return;
+          const input = document.querySelector(`#practice-tab-content .practice-input[data-field="${field}"]`);
+          const isCorrect = input.value.trim() === practiceAnswers[field];
+          const statusIcon = input.closest('.practice-field').querySelector('.status-icon');
+          input.classList.toggle('field-correct', isCorrect);
+          input.classList.toggle('field-incorrect', !isCorrect);
+          statusIcon.innerHTML = isCorrect
+            ? '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Correct</span>'
+            : '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Incorrect</span>';
+        }
+
+        function showPracticeAnswer(field) {
+          if (!practiceAnswers) return;
+          const input = document.querySelector(`#practice-tab-content .practice-input[data-field="${field}"]`);
+          const parent = input.closest('.practice-field');
+          input.value = practiceAnswers[field];
+          checkPracticeField(field); // Reuse check logic to set styles
+          parent.querySelector('.check-btn').classList.add('hidden');
+          parent.querySelector('.show-btn').classList.add('hidden');
+        }
+
+        function showAllPracticeAnswers() {
+          ['network', 'firstHost', 'lastHost', 'broadcast'].forEach(showPracticeAnswer);
+        }
+
+        function checkAllPracticeAnswers() {
+          ['network', 'firstHost', 'lastHost', 'broadcast'].forEach(field => {
+            if (document.querySelector(`#practice-tab-content .practice-input[data-field="${field}"]`).value.trim()) {
+              checkPracticeField(field);
+            }
+          });
+        }
+
+        function generateWildcardProblem() {
+          const problem = SubnetMath.generateRandomIp(currentWildcardDifficulty);
+          document.getElementById('wildcard-ip').value = problem.ip;
+          document.getElementById('wildcard-cidr').value = problem.cidr;
+          wildcardAnswers = SubnetMath.calculateSubnetInfo(problem.ip, problem.cidr);
+          document.querySelectorAll('#wildcard-tab-content .wildcard-input').forEach(input => {
+              input.value = '';
+              input.classList.remove('field-correct', 'field-incorrect');
+              const parent = input.closest('.flex');
+              parent.querySelector('.status-icon').innerHTML = '';
+              const checkBtn = parent.querySelector('.wildcard-check-btn');
+              if (checkBtn) checkBtn.classList.add('hidden');
+              parent.querySelector('.wildcard-show-btn')?.classList.remove('hidden');
+          });
+          if (wildcardAnswers) {
+              document.getElementById('wildcard-reference').classList.remove('hidden');
+              document.getElementById('wildcard-ref-mask').textContent = wildcardAnswers.mask;
+              document.getElementById('wildcard-ref-network').textContent = wildcardAnswers.network;
+              document.getElementById('wildcard-ref-broadcast').textContent = wildcardAnswers.broadcast;
+          } else {
+              document.getElementById('wildcard-reference').classList.add('hidden');
+          }
+        }
+
+        function checkWildcardField(field) {
+          if (!wildcardAnswers) return;
+          const input = document.querySelector(`#wildcard-tab-content .wildcard-input[data-field="${field}"]`);
+          const correctValue = String(wildcardAnswers[field]);
+          const isCorrect = input.value.trim() === correctValue;
+          const statusEl = input.closest('.flex').querySelector('.status-icon');
+          input.classList.toggle('field-correct', isCorrect);
+          input.classList.toggle('field-incorrect', !isCorrect);
+          statusEl.innerHTML = isCorrect
+            ? '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Correct</span>'
+            : '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Incorrect</span>';
+        }
+
+        function showWildcardAnswer(field) {
+          if (!wildcardAnswers) return;
+          const input = document.querySelector(`#wildcard-tab-content .wildcard-input[data-field="${field}"]`);
+          const parent = input.closest('.flex');
+          input.value = wildcardAnswers[field];
+          checkWildcardField(field);
+          parent.querySelector('.wildcard-check-btn')?.classList.add('hidden');
+          parent.querySelector('.wildcard-show-btn')?.classList.add('hidden');
+        }
+
+        function showAllWildcardAnswers() {
+            ['wildcard', 'firstHost', 'lastHost', 'totalHosts'].forEach(showWildcardAnswer);
+        }
+
+        function checkAllWildcardAnswers() {
+            ['wildcard', 'firstHost', 'lastHost', 'totalHosts'].forEach(field => {
+                const input = document.querySelector(`#wildcard-tab-content .wildcard-input[data-field="${field}"]`);
+                if (input?.value.trim()) checkWildcardField(field);
+            });
+        }
+        
+        function showSubnetList(info) {
+            const contentEl = document.getElementById('subnet-list-content');
+            let html = '<div class="space-y-2">';
+            let currentNetwork = info.network;
+            for (let i = 0; i < 20; i++) {
+                const subnetInfo = SubnetMath.calculateSubnetInfo(currentNetwork, info.cidr);
+                if (!subnetInfo) break;
+                html += `
+                <div class="p-3 bg-gray-50 rounded-lg">
+                    <div class="font-mono font-bold text-blue-600">${subnetInfo.network} /${subnetInfo.cidr}</div>
+                    <div class="text-xs text-gray-600">${subnetInfo.firstHost} - ${subnetInfo.lastHost}</div>
+                </div>`;
+                currentNetwork = SubnetMath.getNextSubnet(currentNetwork, info.cidr);
+                if (currentNetwork === info.network || currentNetwork === '0.0.0.0') break;
+            }
+            html += '</div>';
+            contentEl.innerHTML = html;
+        }
+
+        function updateCalculator() {
+          const info = getCalculatorInfo();
+          if (!info) return;
+          document.getElementById('calc-class').textContent = `Class ${info.classType}`;
+          const defaultCidr = info.classType === 'A' ? 8 : info.classType === 'B' ? 16 : 24;
+          const subnets = Math.pow(2, Math.max(0, info.cidr - defaultCidr));
+          document.getElementById('calc-subnets').textContent = subnets.toLocaleString();
+          document.getElementById('calc-hostbits').textContent = info.hostBits;
+          document.getElementById('calc-totalhosts').textContent = info.totalHosts.toLocaleString();
+          document.getElementById('calc-usablehosts').textContent = info.usableHosts.toLocaleString();
+          document.getElementById('calc-network').textContent = info.network;
+          document.getElementById('calc-mask').textContent = info.mask;
+          document.getElementById('calc-wildcard').textContent = info.wildcard;
+          document.getElementById('calc-firsthost').textContent = info.firstHost;
+          document.getElementById('calc-lasthost').textContent = info.lastHost;
+          document.getElementById('calc-broadcast').textContent = info.broadcast;
+          const ip = document.getElementById('calc-ip').value;
+          if (SubnetMath.isValidIp(ip)) {
+            document.getElementById('calc-binary-ip').textContent = SubnetMath.ipToBinary(ip);
+            document.getElementById('calc-binary-mask').textContent = SubnetMath.ipToBinary(info.mask);
+            document.getElementById('calc-binary-network').textContent = SubnetMath.ipToBinary(info.network);
+          }
+        }
+
+        function getCalculatorInfo() {
+          const ip = document.getElementById('calc-ip').value;
+          const cidr = parseInt(document.getElementById('calc-cidr').value, 10);
+          if (!SubnetMath.isValidIp(ip) || isNaN(cidr) || cidr < 8 || cidr > 30) return null;
+          return SubnetMath.calculateSubnetInfo(ip, cidr);
+        }
+
+        // --- Flashcard Logic ---
+        function getEyeIconHTML() {
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="fc-icon fc-icon-left" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C3.732 4.943 9.522 3 10 3s6.268 1.943 9.542 7c-3.274 5.057-9.064 7-9.542 7S3.732 15.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>`;
+        }
+        function getRefreshIconHTML() {
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="fc-icon fc-icon-left" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 110 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" /></svg>`;
+        }
+        
+        function setFlashcardDifficulty(difficulty) {
+            currentFlashcardDifficulty = difficulty;
+            document.querySelectorAll('.fc-difficulty-button').forEach(btn => {
+                const isActive = btn.dataset.difficulty === difficulty;
+                btn.classList.toggle('active', isActive);
+            });
+            handleNextFlashcard();
+        }
+
+        function getNextCard(difficulty, currentCard) {
+            const filteredCards = FLASHCARD_DATA.filter(card => card.difficulty === difficulty);
+            if (filteredCards.length === 0) return null;
+            let newCards = filteredCards;
+            if (currentCard) {
+                newCards = filteredCards.filter(card => card.question !== currentCard.question);
+            }
+            if (newCards.length === 0) {
+                newCards = filteredCards;
+            }
+            const randomIndex = Math.floor(Math.random() * newCards.length);
+            return newCards[randomIndex];
+        }
+
+        function handleRevealFlashcard() {
+            if (!currentFlashcard) return;
+            isFlashcardRevealed = !isFlashcardRevealed;
+            const inner = document.querySelector('#fc-container .fc-inner');
+            inner.classList.toggle('is-revealed', isFlashcardRevealed);
+            updateRevealButton();
+        }
+
+        function updateRevealButton() {
+             const btn = document.getElementById('fc-reveal-btn');
+             btn.classList.toggle('revealed-state', isFlashcardRevealed);
+             if (isFlashcardRevealed) {
+                btn.innerHTML = `${getRefreshIconHTML()} Show Question`;
+            } else {
+                btn.innerHTML = `${getEyeIconHTML()} Reveal Answer`;
+            }
+        }
+        
+        function handleNextFlashcard() {
+            const inner = document.querySelector('#fc-container .fc-inner');
+            if (isFlashcardRevealed && inner) {
+                isFlashcardRevealed = false;
+                inner.classList.remove('is-revealed');
+                setTimeout(() => {
+                    currentFlashcard = getNextCard(currentFlashcardDifficulty, currentFlashcard);
+                    updateFlashcardDOM();
+                }, 350);
+            } else {
+                currentFlashcard = getNextCard(currentFlashcardDifficulty, currentFlashcard);
+                updateFlashcardDOM();
+            }
+        }
+        
+        function updateFlashcardDOM() {
+            const container = document.getElementById('fc-container');
+            const revealBtn = document.getElementById('fc-reveal-btn');
+            const nextBtn = document.getElementById('fc-next-btn');
+
+            if (currentFlashcard) {
+                container.innerHTML = `
+                    <div class="fc-inner">
+                        <div class="fc-card-face fc-card-front">
+                            <p>${currentFlashcard.question}</p>
+                        </div>
+                        <div class="fc-card-face fc-card-back">
+                            <p>${currentFlashcard.answer}</p>
+                        </div>
+                    </div>`;
+                revealBtn.disabled = false;
+                nextBtn.disabled = false;
+            } else {
+                container.innerHTML = `<div class="fc-placeholder">Select a difficulty to begin.</div>`;
+                revealBtn.disabled = true;
+                nextBtn.disabled = true;
+            }
+            updateRevealButton();
+        }
+
+        function toggleTheme() {
+          isDarkMode = !isDarkMode;
+          document.body.classList.toggle('dark-mode', isDarkMode);
+          document.getElementById('theme-icon-light').classList.toggle('hidden', isDarkMode);
+          document.getElementById('theme-icon-dark').classList.toggle('hidden', !isDarkMode);
+          localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        }
+
+        function loadTheme() {
+          if (localStorage.getItem('theme') !== 'light') {
+            isDarkMode = true;
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-icon-light').classList.add('hidden');
+            document.getElementById('theme-icon-dark').classList.remove('hidden');
+          }
+        }
     </script>
 </body>
 </html>
