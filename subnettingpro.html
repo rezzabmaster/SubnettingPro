@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Subnetting Pro - Complete Subnet Calculator</title>
+    <meta name="description" content="Free offline subnetting calculator with practice modes, wildcard masks, and complete subnet analysis">
+    
+    <!-- All CSS embedded inline -->
+    <style>
+        /*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */*,::after,::before{box-sizing:border-box}html{-moz-tab-size:4;tab-size:4}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}strong{font-weight:bolder}button,input,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button{text-transform:none}[type=button],button{-webkit-appearance:button}::-moz-focus-inner{border-style:none;padding:0}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}h1,h2,h3,p{margin:0}button{background-color:transparent;background-image:none}ul{list-style:none;margin:0;padding:0}html{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";line-height:1.5}body{font-family:inherit;line-height:inherit}*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:currentColor}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button{cursor:pointer}h1,h2,h3{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,textarea{padding:0;line-height:inherit;color:inherit}svg{display:block;vertical-align:middle}[hidden]{display:none}*,::after,::before{--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}.visible{visibility:visible}.fixed{position:fixed}.inset-0{top:0;right:0;bottom:0;left:0}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mt-0{margin-top:0}.mt-2{margin-top:.5rem}.mt-4{margin-top:1rem}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-6{margin-bottom:1.5rem}.ml-2{margin-left:.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-20{width:5rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.flex-1{flex:1 1 0%}.transform{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;transform:translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes spin{to{transform:rotate(360deg)}}@keyframes ping{100%,75%{transform:scale(2);opacity:0}}@keyframes pulse{50%{opacity:.5}}@keyframes bounce{0%,100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.space-x-8>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem * var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem * var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:.25rem}.rounded-lg{border-radius:.5rem}.rounded-full{border-radius:9999px}.border-2{border-width:2px}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-b{border-bottom-width:1px}.border-transparent{border-color:transparent}.border-gray-200{--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}.border-gray-300{--tw-border-opacity:1;border-color:rgba(209,213,219,var(--tw-border-opacity))}.border-blue-200{--tw-border-opacity:1;border-color:rgba(191,219,254,var(--tw-border-opacity))}.border-blue-600{--tw-border-opacity:1;border-color:rgba(37,99,235,var(--tw-border-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgba(249,250,251,var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.bg-gray-600{--tw-bg-opacity:1;background-color:rgba(75,85,99,var(--tw-bg-opacity))}.bg-green-600{--tw-bg-opacity:1;background-color:rgba(5,150,105,var(--tw-bg-opacity))}.bg-green-700{--tw-bg-opacity:1;background-color:rgba(4,120,87,var(--tw-bg-opacity))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgba(239,246,255,var(--tw-bg-opacity))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgba(219,234,254,var(--tw-bg-opacity))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgba(37,99,235,var(--tw-bg-opacity))}.bg-blue-700{--tw-bg-opacity:1;background-color:rgba(29,78,216,var(--tw-bg-opacity))}.bg-opacity-50{--tw-bg-opacity:0.5}.p-2{padding:.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-3{padding-left:.75rem;padding-right:.25rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.font-medium{font-weight:500}.font-bold{font-weight:700}.text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgba(75,85,99,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.text-gray-800{--tw-text-opacity:1;color:rgba(31,41,55,var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgba(17,24,39,var(--tw-text-opacity))}.text-red-600{--tw-text-opacity:1;color:rgba(220,38,38,var(--tw-text-opacity))}.text-green-600{--tw-text-opacity:1;color:rgba(5,150,105,var(--tw-text-opacity))}.text-blue-600{--tw-text-opacity:1;color:rgba(37,99,235,var(--tw-text-opacity))}.text-blue-800{--tw-text-opacity:1;color:rgba(30,64,175,var(--tw-text-opacity))}.text-blue-900{--tw-text-opacity:1;color:rgba(30,58,138,var(--tw-text-opacity))}*,::after,::before{--tw-shadow:0 0 #0000}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.05);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}*,::after,::before{--tw-ring-inset:var(--tw-empty, );/*!*//*!*/--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59, 130, 246, 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-blue-500{--tw-ring-opacity:1;--tw-ring-color:rgba(59, 130, 246, var(--tw-ring-opacity))}.transition{transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.ease-in{transition-timing-function:cubic-bezier(0.4,0,1,1)}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgba(55,65,81,var(--tw-bg-opacity))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.hover\:border-blue-600:hover{--tw-border-opacity:1;border-color:rgba(37,99,235,var(--tw-border-opacity))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgba(29,78,216,var(--tw-bg-opacity))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgba(4,120,87,var(--tw-bg-opacity))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-color:rgba(59,130,246,var(--tw-ring-opacity))}.focus\:border-transparent:focus{border-color:transparent}
+        
+        /* Custom Styles - Mobile First */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 16px; /* Prevents zoom on iOS */
+        }
+        
+        .max-h-\[90vh\] {
+            max-height: 90vh;
+        }
+
+        /* Mobile Responsive Overrides */
+        @media (max-width: 640px) {
+            .max-w-7xl {
+                max-width: 100% !important;
+            }
+            
+            .px-4 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            .py-8 {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            
+            .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(1rem * var(--tw-space-x-reverse)) !important;
+                margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse))) !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.25rem !important;
+                line-height: 1.75rem !important;
+            }
+            
+            .py-4 {
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+            
+            .px-1 {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+            
+            /* Make inputs and buttons more touch-friendly */
+            input, button {
+                min-height: 44px !important;
+                font-size: 16px !important; /* Prevents zoom */
+            }
+            
+            .px-3 {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
+            
+            .py-2 {
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+            
+            /* Stack difficulty buttons vertically on small screens */
+            .difficulty-btn, .wildcard-difficulty-btn {
+                flex: 1 !important;
+                min-width: 80px !important;
+            }
+            
+            /* Improve grid layouts */
+            .grid-cols-2 {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            }
+            
+            .grid-cols-3 {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            }
+            
+            .grid-cols-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            
+            /* Better spacing for mobile */
+            .gap-4 {
+                gap: 0.75rem !important;
+            }
+            
+            .gap-3 {
+                gap: 0.5rem !important;
+            }
+            
+            .gap-2 {
+                gap: 0.25rem !important;
+            }
+            
+            .mb-6 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .p-6 {
+                padding: 1rem !important;
+            }
+            
+            /* Modal adjustments for mobile */
+            .max-w-2xl {
+                max-width: 95% !important;
+                margin: 1rem !important;
+            }
+            
+            .max-h-\[90vh\] {
+                max-height: 85vh !important;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 360px) {
+            .px-4 {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+            
+            .text-sm {
+                font-size: 0.75rem !important;
+                line-height: 1rem !important;
+            }
+            
+            .py-1 {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            
+            .px-3 {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        body.dark-mode .bg-white {
+            background-color: #2d2d2d !important;
+        }
+        
+        body.dark-mode .bg-gray-50 {
+            background-color: #252525 !important;
+        }
+        
+        body.dark-mode .bg-gray-100 {
+            background-color: #2d2d2d !important;
+        }
+        
+        body.dark-mode .bg-blue-50 {
+            background-color: #1e3a5f !important;
+        }
+        
+        body.dark-mode .border-gray-200,
+        body.dark-mode .border-gray-300 {
+            border-color: #404040 !important;
+        }
+        
+        body.dark-mode .border-blue-200 {
+            border-color: #2563eb !important;
+        }
+        
+        body.dark-mode .text-gray-900 {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .text-gray-800 {
+            color: #f3f4f6 !important;
+        }
+        
+        body.dark-mode .text-gray-700 {
+            color: #d1d5db !important;
+        }
+        
+        body.dark-mode .text-gray-600 {
+            color: #9ca3af !important;
+        }
+        
+        body.dark-mode .text-gray-500 {
+            color: #6b7280 !important;
+        }
+        
+        body.dark-mode .text-blue-800 {
+            color: #93c5fd !important;
+        }
+        
+        body.dark-mode .text-blue-900 {
+            color: #bfdbfe !important;
+        }
+        
+        body.dark-mode input,
+        body.dark-mode textarea {
+            background-color: #2d2d2d !important;
+            color: #ffffff !important;
+            border-color: #404040 !important;
+        }
+        
+        body.dark-mode input::placeholder {
+            color: #6b7280 !important;
+        }
+        
+        body.dark-mode button:not(.bg-blue-600):not(.bg-green-600):not(.bg-blue-100) {
+            background-color: #2d2d2d !important;
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .hover\:bg-gray-100:hover {
+            background-color: #404040 !important;
+        }
+        
+        body.dark-mode .hover\:bg-gray-200:hover {
+            background-color: #4b5563 !important;
+        }
+        
+        body.dark-mode .shadow,
+        body.dark-mode .shadow-sm {
+            box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06) !important;
+        }
+        
+        /* Light Mode Specific */
+        body:not(.dark-mode) {
+            background-color: #f9fafb;
+            color: #111827;
+        }
+        
+        /* Tab Styling */
+        .tab-active {
+            border-bottom: 2px solid #2563eb !important;
+            color: #2563eb !important;
+            --tw-text-opacity: 1;
+        }
+        
+        .field-correct {
+            border-color: #10b981 !important;
+            border-width: 2px !important;
+        }
+        
+        .field-incorrect {
+            border-color: #ef4444 !important;
+            border-width: 2px !important;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Ensure buttons stay visible */
+        .bg-blue-600 {
+            background-color: #2563eb !important;
+            color: white !important;
+        }
+        
+        .bg-green-600 {
+            background-color: #10b981 !important;
+            color: white !important;
+        }
+        
+        /* Modal overlay */
+        body.dark-mode #help-modal,
+        body.dark-mode #subnet-list-modal {
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+        
+        body.dark-mode #help-modal .bg-white,
+        body.dark-mode #subnet-list-modal .bg-white {
+            background-color: #2d2d2d !important;
+        }
+
+        /* Custom style for the tutorial table */
+        .tutorial-table-header {
+            font-weight: 500;
+            color: #111827;
+        }
+        body.dark-mode .tutorial-table-header {
+            color: #f3f4f6;
+        }
+        .tutorial-table-row > div {
+            padding: 0.5rem 0.75rem;
+        }
+
+        /* For screen readers */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Styles for Flashcards Tab */
+        #flashcards-tab-content {
+            --slate-900: #0f172a;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-400: #94a3b8;
+            --slate-300: #cbd5e1;
+            --slate-200: #e2e8f0;
+            --slate-800: #1e293b;
+            --sky-300: #7dd3fc;
+            --sky-400: #38bdf8;
+            --sky-500: #0ea5e9;
+            --sky-600: #0284c7;
+            --sky-900: #0c4a6e;
+            --green-500: #22c55e;
+            --yellow-500: #eab308;
+            --red-500: #ef4444;
+            --white: #ffffff;
+            
+            background-color: var(--slate-900);
+            color: var(--white);
+            border-radius: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            padding: 1rem;
+        }
+
+        #flashcards-tab-content .fc-background-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(to right, rgba(51, 65, 85, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(51, 65, 85, 0.2) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+            mask-image: linear-gradient(to bottom, white 5%, transparent 90%);
+        }
+
+        #flashcards-tab-content .fc-content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1.5rem 0;
+        }
+
+        #flashcards-tab-content header { text-align: center; margin-bottom: 1.5rem; }
+        #flashcards-tab-content h1 { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; color: var(--sky-400); }
+        #flashcards-tab-content p { color: var(--slate-400); margin-top: 0.5rem; font-size: 1.125rem; line-height: 1.75rem; }
+        #flashcards-tab-content .fc-difficulty-selector { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        #flashcards-tab-content .fc-difficulty-button { padding: 0.5rem 1.5rem; font-size: 0.875rem; font-weight: 600; border-radius: 9999px; transition: all 0.3s ease; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); background-color: var(--slate-700); color: var(--slate-300); }
+        #flashcards-tab-content .fc-difficulty-button:focus { outline: 2px solid transparent; outline-offset: 2px; }
+        #flashcards-tab-content .fc-difficulty-button.easy:not(.active):hover { background-color: rgba(34, 197, 94, 0.5); color: white; }
+        #flashcards-tab-content .fc-difficulty-button.medium:not(.active):hover { background-color: rgba(234, 179, 8, 0.5); color: white; }
+        #flashcards-tab-content .fc-difficulty-button.hard:not(.active):hover { background-color: rgba(239, 68, 68, 0.5); color: white; }
+        #flashcards-tab-content .fc-difficulty-button.active.easy { background-color: var(--green-500); color: white; }
+        #flashcards-tab-content .fc-difficulty-button.active.medium { background-color: var(--yellow-500); color: white; }
+        #flashcards-tab-content .fc-difficulty-button.active.hard { background-color: var(--red-500); color: white; }
+        #flashcards-tab-content .fc-container { width: 100%; max-width: 42rem; height: 20rem; perspective: 1000px; }
+        #flashcards-tab-content .fc-placeholder { width: 100%; height: 100%; background-color: rgba(51, 65, 85, 0.5); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: var(--slate-400); font-size: 1.25rem; font-weight: 500; }
+        #flashcards-tab-content .fc-inner { position: relative; width: 100%; height: 100%; transition: transform 0.7s; transform-style: preserve-3d; }
+        #flashcards-tab-content .fc-inner.is-revealed { transform: rotateY(180deg); }
+        #flashcards-tab-content .fc-card-face { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); padding: 2rem; display: flex; align-items: center; justify-content: center; box-sizing: border-box; text-align: center; }
+        #flashcards-tab-content .fc-card-front { background-color: var(--slate-800); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--sky-300); font-size: 1.5rem; font-weight: 600; }
+        #flashcards-tab-content .fc-card-back { background-color: var(--sky-900); border: 1px solid rgba(14, 165, 233, 0.3); color: var(--white); font-size: 1.75rem; font-weight: 700; transform: rotateY(180deg); }
+        #flashcards-tab-content .fc-action-buttons { display: flex; gap: 1rem; margin-top: 2rem; }
+        #flashcards-tab-content .fc-action-button { display: flex; align-items: center; justify-content: center; font-weight: 700; padding: 0.75rem 2rem; border-radius: 9999px; border: none; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2); transform: scale(1); }
+        #flashcards-tab-content .fc-action-button:hover:not(:disabled) { transform: scale(1.05); }
+        #flashcards-tab-content .fc-action-button:disabled { cursor: not-allowed; transform: scale(1); }
+        #flashcards-tab-content #fc-reveal-btn { background-color: var(--sky-600); color: var(--white); }
+        #flashcards-tab-content #fc-reveal-btn:hover:not(:disabled) { background-color: var(--sky-500); }
+        #flashcards-tab-content #fc-reveal-btn:disabled { background-color: var(--slate-600); }
+        #flashcards-tab-content #fc-reveal-btn.revealed-state { background-color: var(--slate-200); color: var(--slate-800); }
+        #flashcards-tab-content #fc-reveal-btn.revealed-state:hover:not(:disabled) { background-color: var(--white); }
+        #flashcards-tab-content #fc-next-btn { background-color: var(--slate-200); color: var(--slate-800); }
+        #flashcards-tab-content #fc-next-btn:hover:not(:disabled) { background-color: var(--white); }
+        #flashcards-tab-content .fc-icon { width: 1.25rem; height: 1.25rem; }
+        #flashcards-tab-content .fc-icon-left { margin-right: 0.5rem; }
+        #flashcards-tab-content .fc-icon-right { margin-left: 0.5rem; }
+        @media (min-width: 768px) {
+            #flashcards-tab-content h1 { font-size: 3rem; line-height: 1; }
+            #flashcards-tab-content .fc-card-back { font-size: 2rem; }
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                    </svg>
+                    <h1 class="text-2xl font-bold text-gray-900">Subnetting Pro</h1>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button type="button" id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Toggle dark mode">
+                        <svg id="theme-icon-light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="theme-icon-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    <button type="button" id="help-button" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Open help tutorial" aria-haspopup="dialog" aria-expanded="false">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tabs -->
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex space-x-8" aria-label="Tabs" role="tablist">
+                <button type="button" id="practice-tab-btn" class="tab-button tab-active py-4 px-1 border-b-2 font-medium text-sm" data-tab="practice" role="tab" aria-controls="practice-tab-content" aria-selected="true">
+                    Practice Mode
+                </button>
+                <button type="button" id="wildcard-tab-btn" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="wildcard" role="tab" aria-controls="wildcard-tab-content" aria-selected="false" tabindex="-1">
+                    Wildcard Mode
+                </button>
+                <button type="button" id="calculator-tab-btn" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="calculator" role="tab" aria-controls="calculator-tab-content" aria-selected="false" tabindex="-1">
+                    Calculator
+                </button>
+                <button type="button" id="flashcards-tab-btn" class="tab-button py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700" data-tab="flashcards" role="tab" aria-controls="flashcards-tab-content" aria-selected="false" tabindex="-1">
+                    Flashcards
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <!-- Practice Mode -->
+        <div id="practice-tab-content" class="tab-content" role="tabpanel" aria-labelledby="practice-tab-btn" aria-hidden="false">
+            <div class="bg-white rounded-lg shadow p-6">
+                <!-- Difficulty Selector -->
+                <div class="mb-6">
+                    <label id="practice-difficulty-label" class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                    <div class="flex flex-wrap gap-2" role="radiogroup" aria-labelledby="practice-difficulty-label">
+                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium" data-difficulty="easy" role="radio" aria-checked="true" tabindex="0">Easy</button>
+                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="medium" role="radio" aria-checked="false" tabindex="-1">Medium</button>
+                        <button type="button" class="difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="hard" role="radio" aria-checked="false" tabindex="-1">Hard</button>
+                    </div>
+                    <p id="difficulty-desc" class="text-sm text-gray-500 mt-2">Standard subnets (/24, /16) - Perfect for beginners</p>
+                </div>
+
+                <!-- Target IP Input -->
+                <div class="mb-6">
+                    <label for="practice-ip" class="block text-sm font-medium text-gray-700 mb-2">Target Network</label>
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <div class="flex gap-2 flex-1">
+                            <input type="text" id="practice-ip" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="192.168.1.0">
+                            <span class="text-2xl font-bold text-gray-700 flex items-center" aria-hidden="true">/</span>
+                            <label for="practice-cidr" class="sr-only">CIDR</label>
+                            <input type="text" id="practice-cidr" class="w-20 px-3 py-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="24" maxlength="2">
+                        </div>
+                        <button type="button" id="practice-new-btn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium flex items-center justify-center gap-2 w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                            New Problem
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Practice Fields -->
+                <div class="space-y-4 mb-6">
+                    <div class="practice-field">
+                        <label for="practice-network" class="block text-sm font-medium text-gray-700 mb-1">Network Address</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="practice-network" data-field="network" class="practice-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" class="check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700" data-field="network">Check</button>
+                            <button type="button" class="show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700" data-field="network">Show</button>
+                        </div>
+                    </div>
+                    <div class="practice-field">
+                        <label for="practice-firstHost" class="block text-sm font-medium text-gray-700 mb-1">First Host</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="practice-firstHost" data-field="firstHost" class="practice-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" class="check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700" data-field="firstHost">Check</button>
+                            <button type="button" class="show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700" data-field="firstHost">Show</button>
+                        </div>
+                    </div>
+                    <div class="practice-field">
+                        <label for="practice-lastHost" class="block text-sm font-medium text-gray-700 mb-1">Last Host</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="practice-lastHost" data-field="lastHost" class="practice-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" class="check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700" data-field="lastHost">Check</button>
+                            <button type="button" class="show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700" data-field="lastHost">Show</button>
+                        </div>
+                    </div>
+                    <div class="practice-field">
+                        <label for="practice-broadcast" class="block text-sm font-medium text-gray-700 mb-1">Broadcast Address</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="practice-broadcast" data-field="broadcast" class="practice-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" class="check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700" data-field="broadcast">Check</button>
+                            <button type="button" class="show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700" data-field="broadcast">Show</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex gap-3 mb-6">
+                    <button type="button" id="practice-show-all" class="flex-1 px-4 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                        Show All
+                    </button>
+                    <button type="button" id="practice-check-all" class="flex-1 px-4 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Check All
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div id="practice-stats" class="bg-gray-50 rounded-lg p-4 hidden">
+                    <div class="grid grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <span class="text-gray-600">Class:</span>
+                            <span id="stats-class" class="font-medium text-gray-900 ml-2">-</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">Subnet Mask:</span>
+                            <span id="stats-mask" class="font-medium text-gray-900 ml-2">-</span>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">Usable Hosts:</span>
+                            <span id="stats-hosts" class="font-medium text-gray-900 ml-2">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wildcard Mode -->
+        <div id="wildcard-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="wildcard-tab-btn" aria-hidden="true">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 flex items-start gap-3" role="alert">
+                    <svg class="w-5 h-5 text-blue-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <p class="text-sm text-blue-800">Wildcard masks are the inverse of subnet masks, used in ACLs and routing protocols to identify ranges of IP addresses.</p>
+                </div>
+
+                <!-- Difficulty Selector for Wildcard -->
+                <div class="mb-6">
+                    <label id="wildcard-difficulty-label" class="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                    <div class="flex flex-wrap gap-2" role="radiogroup" aria-labelledby="wildcard-difficulty-label">
+                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-blue-600 bg-blue-600 text-white font-medium" data-difficulty="easy" role="radio" aria-checked="true" tabindex="0">Easy</button>
+                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="medium" role="radio" aria-checked="false" tabindex="-1">Medium</button>
+                        <button type="button" class="wildcard-difficulty-btn px-4 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-600" data-difficulty="hard" role="radio" aria-checked="false" tabindex="-1">Hard</button>
+                    </div>
+                    <p id="wildcard-difficulty-desc" class="text-sm text-gray-500 mt-2">Standard subnets (/24, /16) - Perfect for beginners</p>
+                </div>
+                
+                <!-- Target Network for Wildcard -->
+                <div class="mb-6">
+                    <label for="wildcard-ip" class="block text-sm font-medium text-gray-700 mb-2">Target Network</label>
+                    <div class="flex gap-2">
+                        <input type="text" id="wildcard-ip" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="192.168.10.0">
+                        <span class="text-2xl font-bold text-gray-700 flex items-center" aria-hidden="true">/</span>
+                        <label for="wildcard-cidr" class="sr-only">CIDR</label>
+                        <input type="text" id="wildcard-cidr" class="w-20 px-3 py-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500" placeholder="27" maxlength="2">
+                        <button type="button" id="wildcard-new-btn" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                            New
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wildcard Fields -->
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <label for="wildcard-mask-input" class="block text-sm font-medium text-gray-700 mb-1">Wildcard Mask</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="wildcard-mask-input" data-field="wildcard" class="wildcard-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span id="wildcard-mask-status" class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" id="wildcard-mask-check" class="wildcard-check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">Check</button>
+                            <button type="button" id="wildcard-mask-show" class="wildcard-show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Show</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="wildcard-first-input" class="block text-sm font-medium text-gray-700 mb-1">First Usable IP</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="wildcard-first-input" data-field="firstHost" class="wildcard-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span id="wildcard-first-status" class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" id="wildcard-first-check" class="wildcard-check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">Check</button>
+                            <button type="button" id="wildcard-first-show" class="wildcard-show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Show</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="wildcard-last-input" class="block text-sm font-medium text-gray-700 mb-1">Last Usable IP</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="wildcard-last-input" data-field="lastHost" class="wildcard-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="•.•.•.•">
+                            <span id="wildcard-last-status" class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" id="wildcard-last-check" class="wildcard-check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">Check</button>
+                            <button type="button" id="wildcard-last-show" class="wildcard-show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Show</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="wildcard-block-input" class="block text-sm font-medium text-gray-700 mb-1">Block Size (Total IPs)</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="wildcard-block-input" data-field="totalHosts" class="wildcard-input flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="0">
+                            <span id="wildcard-block-status" class="status-icon w-8" role="status" aria-live="polite"></span>
+                            <button type="button" id="wildcard-block-check" class="wildcard-check-btn hidden px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700">Check</button>
+                            <button type="button" id="wildcard-block-show" class="wildcard-show-btn px-3 py-1 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">Show</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex gap-3 mb-6">
+                    <button type="button" id="wildcard-show-all" class="flex-1 px-4 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                        Show All
+                    </button>
+                    <button type="button" id="wildcard-check-all" class="flex-1 px-4 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Check All
+                    </button>
+                </div>
+
+                <div id="wildcard-reference" class="bg-gray-50 rounded-lg p-4 mt-4 hidden">
+                    <h3 class="font-medium text-gray-900 mb-3">Reference Info</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Subnet Mask:</span>
+                            <span id="wildcard-ref-mask" class="font-medium">-</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Network:</span>
+                            <span id="wildcard-ref-network" class="font-medium">-</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Broadcast:</span>
+                            <span id="wildcard-ref-broadcast" class="font-medium">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Mode -->
+        <div id="calculator-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="calculator-tab-btn" aria-hidden="true">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="space-y-6">
+                    <!-- IP Input -->
+                    <div>
+                        <label for="calc-ip" class="block text-sm font-medium text-gray-700 mb-2">Host IP Address</label>
+                        <div class="flex gap-3">
+                            <input type="text" id="calc-ip" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="172.16.10.0" value="172.16.10.0">
+                            <div id="calc-class" class="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-medium flex items-center justify-center">Class B</div>
+                        </div>
+                    </div>
+
+                    <!-- CIDR Input -->
+                    <div>
+                        <label for="calc-cidr" class="block text-sm font-medium text-gray-700 mb-2">Subnet Mask Bits</label>
+                        <input type="number" id="calc-cidr" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="21" value="21" min="8" max="30">
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div id="calc-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div class="text-xs text-blue-600 mb-1">Subnets</div>
+                            <div id="calc-subnets" class="text-2xl font-bold text-blue-900" aria-live="polite">32</div>
+                        </div>
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                            <div class="text-xs text-gray-600 mb-1">Host Bits</div>
+                            <div id="calc-hostbits" class="text-2xl font-bold text-gray-900" aria-live="polite">11</div>
+                        </div>
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                            <div class="text-xs text-gray-600 mb-1">Total Hosts</div>
+                            <div id="calc-totalhosts" class="text-2xl font-bold text-gray-900" aria-live="polite">2048</div>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div class="text-xs text-blue-600 mb-1">Usable Hosts</div>
+                            <div id="calc-usablehosts" class="text-2xl font-bold text-blue-900" aria-live="polite">2046</div>
+                        </div>
+                    </div>
+
+                    <!-- Network Details -->
+                    <div id="calc-details" class="bg-gray-50 rounded-lg p-4">
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                                    Network Address
+                                </span>
+                                <span id="calc-network" class="font-medium text-gray-900" aria-live="polite">172.16.0.0</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                                    Subnet Mask
+                                </span>
+                                <span id="calc-mask" class="font-medium text-gray-900" aria-live="polite">255.255.248.0</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                                    Wildcard Mask
+                                </span>
+                                <span id="calc-wildcard" class="font-medium text-gray-900" aria-live="polite">0.0.7.255</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                                    First Host
+                                </span>
+                                <span id="calc-firsthost" class="font-medium text-gray-900" aria-live="polite">172.16.0.1</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"></path></svg>
+                                    Last Host
+                                </span>
+                                <span id="calc-lasthost" class="font-medium text-gray-900" aria-live="polite">172.16.7.254</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.789"></path></svg>
+                                    Broadcast
+                                </span>
+                                <span id="calc-broadcast" class="font-medium text-gray-900" aria-live="polite">172.16.7.255</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Binary Toggle -->
+                    <button type="button" id="calc-binary-toggle" class="w-full px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium text-gray-700" aria-expanded="false" aria-controls="calc-binary">
+                        Show Binary Breakdown
+                    </button>
+
+                    <!-- Binary Display -->
+                    <div id="calc-binary" class="bg-gray-50 rounded-lg p-4 hidden">
+                        <div class="space-y-4 text-sm font-mono">
+                            <div>
+                                <div class="text-xs text-gray-600 mb-1">IP Address Binary</div>
+                                <div id="calc-binary-ip" class="text-gray-900">10101100.00010000.00001010.00000000</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-600 mb-1">Subnet Mask Binary</div>
+                                <div id="calc-binary-mask" class="text-gray-900">11111111.11111111.11111000.00000000</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-600 mb-1">Network Address Binary</div>
+                                <div id="calc-binary-network" class="text-blue-600 bg-blue-50 p-2 rounded">10101100.00010000.00000000.00000000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex gap-3">
+                        <button type="button" id="calc-prev" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            Prev Subnet
+                        </button>
+                        <button type="button" id="calc-list-subnets" class="flex-1 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-medium flex items-center justify-center gap-2" aria-haspopup="dialog" aria-expanded="false">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                            List Subnets
+                        </button>
+                        <button type="button" id="calc-next" class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium flex items-center justify-center gap-2">
+                            Next Subnet
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flashcards Mode -->
+        <div id="flashcards-tab-content" class="tab-content hidden" role="tabpanel" aria-labelledby="flashcards-tab-btn" aria-hidden="true">
+            <div class="fc-background-grid"></div>
+            <div class="fc-content-wrapper">
+                <header>
+                    <h1>IPv4 Subnetting Practice</h1>
+                    <p>Sharpen your networking skills with flashcards.</p>
+                </header>
+        
+                <div class="fc-difficulty-selector">
+                    <button class="fc-difficulty-button easy" data-difficulty="easy">Easy</button>
+                    <button class="fc-difficulty-button medium" data-difficulty="medium">Medium</button>
+                    <button class="fc-difficulty-button hard" data-difficulty="hard">Hard</button>
+                </div>
+        
+                <div id="fc-container" class="fc-container">
+                    <!-- Flashcard will be rendered here by JS -->
+                </div>
+        
+                <div class="fc-action-buttons">
+                    <button id="fc-reveal-btn" class="fc-action-button" disabled>
+                        <!-- Button content rendered by JS -->
+                    </button>
+                    <button id="fc-next-btn" class="fc-action-button" disabled>
+                        Next
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fc-icon fc-icon-right" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="help-modal-title" aria-hidden="true">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+                <h2 id="help-modal-title" class="text-2xl font-bold text-gray-900">Subnetting Tutorial</h2>
+                <button type="button" id="help-close" class="p-2 hover:bg-gray-100 rounded-lg" aria-label="Close">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto" style="min-height: 0;">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-2">What is Subnetting?</h3>
+                        <p class="text-gray-700">Subnetting divides a larger network into smaller sub-networks. It helps organize networks efficiently and improve security.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-3">Key Terms</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="font-medium text-gray-900">Network Address</div>
+                                <div class="text-sm text-gray-600">The first IP in a subnet; identifies the network itself (cannot be assigned to hosts)</div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">First Host</div>
+                                <div class="text-sm text-gray-600">First usable IP address for devices (Network + 1)</div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Last Host</div>
+                                <div class="text-sm text-gray-600">Last usable IP address for devices (Broadcast - 1)</div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Broadcast</div>
+                                <div class="text-sm text-gray-600">Last IP in subnet; used to send data to all hosts (cannot be assigned)</div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">CIDR Notation</div>
+                                <div class="text-sm text-gray-600">Slash notation (e.g., /24) indicating how many bits are used for the network</div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Wildcard Mask</div>
+                                <div class="text-sm text-gray-600">Inverse of subnet mask, used in ACLs and routing protocols (e.g., 0.0.0.255 for /24)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-3">IP Address Classes</h3>
+                        <div class="text-sm rounded-lg border border-gray-200 overflow-hidden">
+                            <div class="grid grid-cols-4 tutorial-table-header bg-gray-50">
+                                <div>Class</div>
+                                <div>Range</div>
+                                <div>Default Mask</div>
+                                <div>Purpose</div>
+                            </div>
+                            <div class="space-y-1 p-2">
+                                <div class="grid grid-cols-4 tutorial-table-row">
+                                    <div class="font-bold">A</div>
+                                    <div class="font-mono">1.0.0.0 - 126.255.255.255</div>
+                                    <div class="font-mono">255.0.0.0</div>
+                                    <div>Unicast</div>
+                                </div>
+                                <div class="grid grid-cols-4 tutorial-table-row bg-gray-50 rounded-md">
+                                    <div class="font-bold">B</div>
+                                    <div class="font-mono">128.0.0.0 - 191.255.255.255</div>
+                                    <div class="font-mono">255.255.0.0</div>
+                                    <div>Unicast</div>
+                                </div>
+                                <div class="grid grid-cols-4 tutorial-table-row">
+                                    <div class="font-bold">C</div>
+                                    <div class="font-mono">192.0.0.0 - 223.255.255.255</div>
+                                    <div class="font-mono">255.255.255.0</div>
+                                    <div>Unicast</div>
+                                </div>
+                                <div class="grid grid-cols-4 tutorial-table-row bg-gray-50 rounded-md">
+                                    <div class="font-bold">D</div>
+                                    <div class="font-mono">224.0.0.0 - 239.255.255.255</div>
+                                    <div>N/A</div>
+                                    <div>Multicast</div>
+                                </div>
+                                <div class="grid grid-cols-4 tutorial-table-row">
+                                    <div class="font-bold">E</div>
+                                    <div class="font-mono">240.0.0.0 - 255.255.255.255</div>
+                                    <div>N/A</div>
+                                    <div>Experimental</div>
+                                </div>
+                            </div>
+                        </div>
+                         <p class="text-xs text-gray-500 mt-2">Note: 127.0.0.0/8 is reserved for loopback addresses.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-3">Private IP Ranges (RFC 1918)</h3>
+                        <div class="text-sm rounded-lg border border-gray-200 overflow-hidden">
+                             <div class="grid grid-cols-3 tutorial-table-header bg-gray-50">
+                                <div>Class</div>
+                                <div>Range</div>
+                                <div>CIDR Block</div>
+                            </div>
+                            <div class="space-y-1 p-2">
+                                <div class="grid grid-cols-3 tutorial-table-row">
+                                    <div class="font-bold">A</div>
+                                    <div class="font-mono">10.0.0.0 - 10.255.255.255</div>
+                                    <div class="font-mono">10.0.0.0/8</div>
+                                </div>
+                                <div class="grid grid-cols-3 tutorial-table-row bg-gray-50 rounded-md">
+                                    <div class="font-bold">B</div>
+                                    <div class="font-mono">172.16.0.0 - 172.31.255.255</div>
+                                    <div class="font-mono">172.16.0.0/12</div>
+                                </div>
+                                <div class="grid grid-cols-3 tutorial-table-row">
+                                    <div class="font-bold">C</div>
+                                    <div class="font-mono">192.168.0.0 - 192.168.255.255</div>
+                                    <div class="font-mono">192.168.0.0/16</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-3">Quick Tips</h3>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                             <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">✓</span>
+                                <span>Each time you add 1 bit to the network (e.g., from /24 to /25), you <strong>double</strong> the number of subnets and <strong>halve</strong> the number of hosts per subnet.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">✓</span>
+                                <span>Subnetting is effectively "borrowing" bits from the host portion of an address to create more sub-networks.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">✓</span>
+                                <span>Higher CIDR = smaller subnet (fewer hosts).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">✓</span>
+                                <span>Usable hosts = 2^(32-CIDR) - 2 (for the network and broadcast addresses). This is not true for /31 and /32 networks.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">✓</span>
+                                <span>A /31 network is a special case for point-to-point links with 2 usable addresses (RFC 3021), and a /32 represents a single host address.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">✓</span>
+                                <span>Wildcard masks are used in Cisco ACLs and OSPF/EIGRP.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-blue-600 mb-2">How to Use This App</h3>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Practice Mode:</strong> Enter subnet details, check your answers, and generate new problems</p>
+                        <p class="text-sm text-gray-700 mb-2"><strong>Wildcard Mode:</strong> Practice wildcard mask calculations for ACLs</p>
+                        <p class="text-sm text-gray-700"><strong>Calculator Mode:</strong> Input an IP and CIDR to see complete subnet breakdown with binary visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Subnet List Modal -->
+    <div id="subnet-list-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4" role="dialog" aria-modal="true" aria-labelledby="subnet-list-modal-title" aria-hidden="true">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+                <h2 id="subnet-list-modal-title" class="text-2xl font-bold text-gray-900">Subnet List</h2>
+                <button type="button" id="subnet-list-close" class="p-2 hover:bg-gray-100 rounded-lg" aria-label="Close">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="subnet-list-content" class="p-6 overflow-y-auto" style="min-height: 0;">
+                <!-- Subnet list will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- All JavaScript embedded inline -->
+    <script>
+        const SubnetMath = {
+          ipToNumber(ip) {
+            const parts = ip.trim().split('.');
+            if (parts.length !== 4) return null;
+            return parts.reduce((acc, octet) => (acc << 8) + Number(octet), 0) >>> 0;
+          },
+
+          numberToIp(num) {
+            return [
+              (num >>> 24) & 0xff,
+              (num >>> 16) & 0xff,
+              (num >>> 8) & 0xff,
+              num & 0xff
+            ].join('.');
+          },
+
+          isValidIp(ip) {
+            if (typeof ip !== 'string') return false;
+            const regex = /^(25[0-5]|2[0-4]\d|1?\d{1,2})\.(25[0-5]|2[0-4]\d|1?\d{1,2})\.(25[0-5]|2[0-4]\d|1?\d{1,2})\.(25[0-5]|2[0-4]\d|1?\d{1,2})$/;
+            return regex.test(ip.trim());
+          },
+
+          cidrToMask(cidr) {
+            cidr = Number(cidr);
+            if (isNaN(cidr) || cidr < 0 || cidr > 32) return null;
+            if (cidr === 0) return 0;
+            return (0xFFFFFFFF << (32 - cidr)) >>> 0;
+          },
+
+          numberToBinary(num) {
+            let binary = (num >>> 0).toString(2).padStart(32, '0');
+            return binary.match(/.{1,8}/g).join('.');
+          },
+
+          getIpClass(ip) {
+            if (!this.isValidIp(ip)) return 'Invalid';
+            const firstOctet = parseInt(ip.split('.')[0], 10);
+            if (firstOctet >= 1 && firstOctet <= 126) return 'A';
+            if (firstOctet === 127) return 'Loopback';
+            if (firstOctet >= 128 && firstOctet <= 191) return 'B';
+            if (firstOctet >= 192 && firstOctet <= 223) return 'C';
+            if (firstOctet >= 224 && firstOctet <= 239) return 'D';
+            if (firstOctet >= 240 && firstOctet <= 255) return 'E';
+            return 'Unknown';
+          },
+
+          getSubnetInfo(ip, cidr) {
+            if (!this.isValidIp(ip)) return null;
+            cidr = Number(cidr);
+            if (isNaN(cidr) || cidr < 0 || cidr > 32) return null;
+            
+            const ipNum = this.ipToNumber(ip);
+            const maskNum = this.cidrToMask(cidr);
+            const networkNum = (ipNum & maskNum) >>> 0;
+            const broadcastNum = (networkNum | (~maskNum)) >>> 0;
+            const totalHosts = Math.pow(2, 32 - cidr);
+            
+            let firstHost, lastHost, usableHosts;
+            if (cidr === 32) {
+                firstHost = this.numberToIp(networkNum);
+                lastHost = this.numberToIp(networkNum);
+                usableHosts = 1;
+            } else if (cidr === 31) {
+                firstHost = this.numberToIp(networkNum);
+                lastHost = this.numberToIp(broadcastNum);
+                usableHosts = 2;
+            } else {
+                firstHost = this.numberToIp(networkNum + 1);
+                lastHost = this.numberToIp(broadcastNum - 1);
+                usableHosts = totalHosts > 2 ? totalHosts - 2 : 0;
+            }
+
+            return {
+              network: this.numberToIp(networkNum),
+              broadcast: this.numberToIp(broadcastNum),
+              mask: this.numberToIp(maskNum),
+              wildcard: this.numberToIp((~maskNum) >>> 0),
+              firstHost: firstHost,
+              lastHost: lastHost,
+              totalHosts: totalHosts,
+              usableHosts: usableHosts,
+              ipClass: this.getIpClass(ip),
+              cidr: cidr
+            };
+          }
+        };
+
+        const flashcardData = {
+            easy: [
+                { q: "What is the broadcast address for the 192.168.1.0 /24 network?", a: "192.168.1.255" },
+                { q: "How many usable host addresses are in a /24 network?", a: "254" },
+                { q: "What is the default subnet mask for a Class C network?", a: "255.255.255.0" },
+                { q: "Is 10.1.2.3 a private or public IP address?", a: "Private" },
+                { q: "What is the network address for the host 172.16.10.5 /24?", a: "172.16.10.0" },
+                { q: "How many total IP addresses are in a /16 network?", a: "65,536" },
+                { q: "What is the CIDR notation for the subnet mask 255.255.255.0?", a: "/24" },
+                { q: "What is the first usable host IP for the 192.168.5.0 /24 network?", a: "192.168.5.1" },
+                { q: "What is the last usable host IP for the 10.0.0.0 /8 network?", a: "10.255.255.254" },
+                { q: "Which IP class does 150.10.20.30 belong to?", a: "Class B" },
+                { q: "What is the purpose of the 127.0.0.1 address?", a: "Loopback address" },
+                { q: "What is the wildcard mask for a /24 subnet?", a: "0.0.0.255" },
+                { q: "What is the CIDR notation for the subnet mask 255.255.0.0?", a: "/16" },
+                { q: "Is 192.168.0.15 a private or public IP address?", a: "Private" },
+                { q: "How many usable host addresses are in a /30 network?", a: "2" },
+                { q: "What is the default subnet mask for a Class A network?", a: "255.0.0.0" },
+                { q: "What is the network address for the host 200.100.50.25 /24?", a: "200.100.50.0" },
+                { q: "How many bits are in an IPv4 address?", a: "32 bits" },
+            ],
+            medium: [
+                { q: "What is the subnet mask for a /27 network?", a: "255.255.255.224" },
+                { q: "What is the network address for the host 172.16.50.100 /22?", a: "172.16.48.0" },
+                { q: "How many subnets and usable hosts per subnet can you get from 192.168.1.0 /24 if you subnet it to /28?", a: "16 subnets, 14 hosts" },
+                { q: "What is the broadcast address for the IP 10.10.10.70 /26?", a: "10.10.10.127" },
+                { q: "What is the last usable host for the network 192.168.100.192 /27?", a: "192.168.100.222" },
+                { q: "What is the wildcard mask for the subnet mask 255.255.255.240?", a: "0.0.0.15" },
+                { q: "What CIDR block does the IP 172.20.127.50 /18 belong to?", a: "172.20.64.0 /18" },
+                { q: "How many usable host addresses are there in a /21 network?", a: "2,046" },
+                { q: "What is the subnet mask for a /19 network?", a: "255.255.224.0" },
+                { q: "What is the block size of a /26 network?", a: "64" },
+                { q: "What is the first usable host for the network 10.1.80.0 /20?", a: "10.1.80.1" },
+                { q: "What is the broadcast address for the network 192.168.30.128 /25?", a: "192.168.30.255" },
+                { q: "What is the CIDR notation for the subnet mask 255.255.240.0?", a: "/20" },
+                { q: "Is 172.32.1.1 a private or public IP address?", a: "Public" },
+                { q: "What is the 3rd valid subnet of 192.168.0.0/24 if you subnet it into /27s?", a: "192.168.0.64 /27" },
+                { q: "How many /27 subnets can you create from a /24 network?", a: "8" },
+                { q: "What is the network address for the host 10.100.127.200 /17?", a: "10.100.0.0" },
+                { q: "What is the wildcard mask for a /22 subnet?", a: "0.0.3.255" },
+            ],
+            hard: [
+                { q: "You need to create a subnet that supports at least 500 hosts. What is the smallest CIDR prefix you can use?", a: "/23 (510 usable hosts)" },
+                { q: "What is the 5th subnet for 10.0.0.0 /8 when it is subnetted to a /12?", a: "10.64.0.0 /12" },
+                { q: "What is the network address for the host 172.31.189.55 /21?", a: "172.31.184.0" },
+                { q: "What is the wildcard mask for a /19 network?", a: "0.0.31.255" },
+                { q: "An IP address is 198.51.100.113 and its mask is 255.255.255.224. What is its broadcast address?", a: "198.51.100.127" },
+                { q: "How many /30 subnets can be created from a single /24 network block?", a: "64" },
+                { q: "A router has an ACL entry: 'permit 192.168.16.0 0.0.7.255'. What range of IP addresses does this permit?", a: "192.168.16.0 to 192.168.23.255" },
+                { q: "Summarize these two routes into a single route: 172.16.16.0/24 and 172.16.17.0/24", a: "172.16.16.0/23" },
+                { q: "What is the last valid host of the 10th /28 subnet within the 192.168.1.0/24 network?", a: "192.168.1.158" },
+                { q: "For a network that needs to support 1000 users, what is the most efficient CIDR prefix?", a: "/22" },
+                { q: "What is the purpose of RFC 3021 in relation to subnetting?", a: "It allows the use of /31 subnets for point-to-point links." },
+                { q: "What is the binary representation of the 3rd octet of a /19 subnet mask?", a: "11100000" },
+                { q: "A host has an IP of 10.20.30.40. Its gateway is 10.20.16.1. What is a possible subnet mask for this network?", a: "/20 (or anything less than /21)" },
+                { q: "How many total IP addresses are available in the entire 172.16.0.0/12 private range?", a: "1,048,576 (2^20)" },
+                { q: "Summarize these four routes: 10.0.8.0/24, 10.0.9.0/24, 10.0.10.0/24, 10.0.11.0/24", a: "10.0.8.0/22" },
+                { q: "You are given the network 192.168.100.0/24. You need to create 6 subnets. What is the new subnet mask and how many hosts per subnet?", a: "Mask: /27 (255.255.255.224), Hosts: 30" }
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let lastFocusedElement;
+            let practiceAnswers, wildcardAnswers;
+            let currentPracticeDifficulty = 'easy', currentWildcardDifficulty = 'easy';
+            let isFlashcardInitialized = false, currentFlashcardDifficulty = 'easy';
+
+            function normalizeIp(ip) {
+                if (!SubnetMath.isValidIp(ip)) return null;
+                return SubnetMath.numberToIp(SubnetMath.ipToNumber(ip));
+            }
+
+            // --- Theme ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIconLight = document.getElementById('theme-icon-light');
+            const themeIconDark = document.getElementById('theme-icon-dark');
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    themeIconLight.classList.add('hidden');
+                    themeIconDark.classList.remove('hidden');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    themeIconLight.classList.remove('hidden');
+                    themeIconDark.classList.add('hidden');
+                }
+            };
+            themeToggle.addEventListener('click', () => {
+                const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+                localStorage.setItem('theme', newTheme);
+                applyTheme(newTheme);
+            });
+            applyTheme(localStorage.getItem('theme') || 'light');
+            
+            // --- Modals ---
+            function openModal(modalId, opener) {
+                lastFocusedElement = opener || document.activeElement;
+                const modal = document.getElementById(modalId);
+                if (!modal) return;
+                modal.dataset.openerId = opener ? opener.id : '';
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                modal.setAttribute('aria-hidden', 'false');
+                if (opener) opener.setAttribute('aria-expanded', 'true');
+                const focusable = Array.from(modal.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+                if (focusable.length > 0) {
+                    const first = focusable[0], last = focusable[focusable.length - 1];
+                    const trapFocus = e => {
+                        if (e.key !== 'Tab') return;
+                        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } 
+                        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+                    };
+                    modal.addEventListener('keydown', trapFocus);
+                    modal.trapFocusListener = trapFocus;
+                }
+                document.addEventListener('keydown', handleEscapeKey);
+                modal.querySelector('button[id$="-close"]')?.focus();
+            }
+
+            function closeModal() {
+                const modal = document.querySelector('.fixed.inset-0.flex:not(.hidden)');
+                if (!modal) return;
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                modal.setAttribute('aria-hidden', 'true');
+                const opener = document.getElementById(modal.dataset.openerId);
+                if (opener) opener.setAttribute('aria-expanded', 'false');
+                document.removeEventListener('keydown', handleEscapeKey);
+                if (modal.trapFocusListener) modal.removeEventListener('keydown', modal.trapFocusListener);
+                lastFocusedElement?.focus();
+            }
+
+            const handleEscapeKey = e => { if (e.key === 'Escape') closeModal(); };
+            document.getElementById('help-button').addEventListener('click', e => openModal('help-modal', e.currentTarget));
+            document.getElementById('calc-list-subnets').addEventListener('click', e => {
+                listSubnets();
+                openModal('subnet-list-modal', e.currentTarget);
+            });
+            document.querySelectorAll('[id$="-close"]').forEach(btn => btn.addEventListener('click', closeModal));
+            
+            // --- Tabs ---
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(btn => btn.addEventListener('click', e => {
+                const targetTab = e.currentTarget.dataset.tab;
+                tabButtons.forEach(b => {
+                    const isSelected = b.dataset.tab === targetTab;
+                    b.classList.toggle('tab-active', isSelected);
+                    b.setAttribute('aria-selected', String(isSelected));
+                    b.setAttribute('tabindex', isSelected ? '0' : '-1');
+                });
+                tabContents.forEach(panel => {
+                    const isHidden = panel.id !== `${targetTab}-tab-content`;
+                    panel.classList.toggle('hidden', isHidden);
+                    panel.setAttribute('aria-hidden', String(isHidden));
+                });
+                if (targetTab === 'flashcards' && !isFlashcardInitialized) initFlashcards();
+            }));
+
+            // --- Calculator ---
+            const calcIp = document.getElementById('calc-ip'), calcCidr = document.getElementById('calc-cidr');
+            const updateCalculator = () => {
+                const ip = calcIp.value.trim();
+                const cidr = parseInt(calcCidr.value, 10);
+                if (!SubnetMath.isValidIp(ip) || isNaN(cidr)) return;
+                const info = SubnetMath.getSubnetInfo(ip, cidr);
+                if (!info) return;
+                document.getElementById('calc-class').textContent = `Class ${info.ipClass}`;
+                document.getElementById('calc-subnets').textContent = info.totalHosts < 1 ? 0 : Math.pow(2, cidr - ({A:8,B:16,C:24}[info.ipClass] || cidr));
+                document.getElementById('calc-hostbits').textContent = 32 - cidr;
+                document.getElementById('calc-totalhosts').textContent = info.totalHosts.toLocaleString();
+                document.getElementById('calc-usablehosts').textContent = info.usableHosts.toLocaleString();
+                document.getElementById('calc-network').textContent = info.network;
+                document.getElementById('calc-mask').textContent = info.mask;
+                document.getElementById('calc-wildcard').textContent = info.wildcard;
+                document.getElementById('calc-firsthost').textContent = info.firstHost;
+                document.getElementById('calc-lasthost').textContent = info.lastHost;
+                document.getElementById('calc-broadcast').textContent = info.broadcast;
+                document.getElementById('calc-binary-ip').textContent = SubnetMath.numberToBinary(SubnetMath.ipToNumber(ip));
+                document.getElementById('calc-binary-mask').textContent = SubnetMath.numberToBinary(SubnetMath.ipToNumber(info.mask));
+                document.getElementById('calc-binary-network').textContent = SubnetMath.numberToBinary(SubnetMath.ipToNumber(info.network));
+            };
+            [calcIp, calcCidr].forEach(el => el.addEventListener('input', updateCalculator));
+
+            document.getElementById('calc-binary-toggle').addEventListener('click', e => {
+                const binaryDiv = document.getElementById('calc-binary');
+                const isHidden = binaryDiv.classList.toggle('hidden');
+                e.currentTarget.setAttribute('aria-expanded', String(!isHidden));
+                e.currentTarget.textContent = isHidden ? 'Show Binary Breakdown' : 'Hide Binary Breakdown';
+            });
+
+            const navigateSubnet = (direction) => {
+                const ip = calcIp.value;
+                const cidr = parseInt(calcCidr.value, 10);
+                const info = SubnetMath.getSubnetInfo(ip, cidr);
+                if (!info) return;
+                const networkNum = SubnetMath.ipToNumber(info.network);
+                const nextNetworkNum = networkNum + (direction * info.totalHosts);
+                if (nextNetworkNum >= 0 && nextNetworkNum < Math.pow(2, 32)) {
+                    calcIp.value = SubnetMath.numberToIp(nextNetworkNum);
+                    updateCalculator();
+                }
+            };
+            document.getElementById('calc-prev').addEventListener('click', () => navigateSubnet(-1));
+            document.getElementById('calc-next').addEventListener('click', () => navigateSubnet(1));
+            
+            function listSubnets() {
+              const ip = calcIp.value.trim();
+              const cidr = parseInt(calcCidr.value, 10);
+              const info = SubnetMath.getSubnetInfo(ip, cidr);
+              if (!info) { document.getElementById('subnet-list-content').innerHTML = '<p>Invalid input.</p>'; return; }
+              const classCidr = {A:8,B:16,C:24}[info.ipClass] || cidr;
+              const baseNetworkNum = SubnetMath.ipToNumber(SubnetMath.getSubnetInfo(ip, classCidr).network);
+              const totalSubnets = Math.pow(2, cidr - classCidr);
+              let html = '<div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">';
+              for (let i = 0; i < Math.min(totalSubnets, 256); i++) {
+                const currentNetworkNum = baseNetworkNum + (i * info.totalHosts);
+                const currentSubnetInfo = SubnetMath.getSubnetInfo(SubnetMath.numberToIp(currentNetworkNum), cidr);
+                html += `<div><strong>${currentSubnetInfo.network}</strong>: ${currentSubnetInfo.firstHost} - ${currentSubnetInfo.lastHost}</div>`;
+              }
+              if (totalSubnets > 256) html += `<div>...and ${totalSubnets-256} more subnets.</div>`;
+              html += '</div>';
+              document.getElementById('subnet-list-content').innerHTML = html;
+            }
+
+            // --- Practice Mode ---
+            const practiceIp = document.getElementById('practice-ip'), practiceCidr = document.getElementById('practice-cidr');
+            const practiceInputs = document.querySelectorAll('.practice-input');
+            const generatePracticeProblem = () => {
+                const octet = () => Math.floor(Math.random() * 256);
+                const ip = `${octet()}.${octet()}.${octet()}.${octet()}`;
+                let cidr;
+                if (currentPracticeDifficulty === 'easy') cidr = [8, 16, 24][Math.floor(Math.random() * 3)];
+                else if (currentPracticeDifficulty === 'medium') cidr = Math.floor(Math.random() * (28 - 18 + 1)) + 18;
+                else cidr = Math.floor(Math.random() * (30 - 8 + 1)) + 8;
+                
+                practiceAnswers = SubnetMath.getSubnetInfo(ip, cidr);
+                if (!practiceAnswers) { generatePracticeProblem(); return; }
+
+                practiceIp.value = practiceAnswers.network;
+                practiceCidr.value = cidr;
+
+                practiceInputs.forEach(input => {
+                    input.value = '';
+                    input.classList.remove('field-correct', 'field-incorrect');
+                    input.closest('.flex').querySelector('.status-icon').innerHTML = '';
+                    input.closest('.flex').querySelector('.check-btn').classList.add('hidden');
+                });
+                document.getElementById('practice-stats').classList.add('hidden');
+            };
+
+            const checkPracticeField = (field) => {
+                if (!practiceAnswers) return;
+                const input = document.querySelector(`.practice-input[data-field="${field}"]`);
+                const user = normalizeIp(input.value.trim());
+                const correct = normalizeIp(practiceAnswers[field]);
+                const isCorrect = user !== null && user === correct;
+
+                input.classList.toggle('field-correct', isCorrect);
+                input.classList.toggle('field-incorrect', !isCorrect);
+                const statusEl = input.closest('.flex').querySelector('.status-icon');
+                statusEl.innerHTML = isCorrect ? '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Correct</span>' : '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Incorrect</span>';
+            };
+            
+            document.getElementById('practice-tab-content').addEventListener('click', e => {
+                if (e.target.classList.contains('show-btn')) document.querySelector(`.practice-input[data-field="${e.target.dataset.field}"]`).value = practiceAnswers[e.target.dataset.field];
+                if (e.target.classList.contains('check-btn')) checkPracticeField(e.target.dataset.field);
+            });
+            document.getElementById('practice-new-btn').addEventListener('click', generatePracticeProblem);
+            document.getElementById('practice-show-all').addEventListener('click', () => practiceInputs.forEach(i => i.value = practiceAnswers[i.dataset.field]));
+            document.getElementById('practice-check-all').addEventListener('click', () => {
+                practiceInputs.forEach(i => checkPracticeField(i.dataset.field));
+                document.getElementById('stats-class').textContent = practiceAnswers.ipClass;
+                document.getElementById('stats-mask').textContent = practiceAnswers.mask;
+                document.getElementById('stats-hosts').textContent = practiceAnswers.usableHosts.toLocaleString();
+                document.getElementById('practice-stats').classList.remove('hidden');
+            });
+            practiceInputs.forEach(input => input.addEventListener('input', e => e.target.closest('.flex').querySelector('.check-btn').classList.remove('hidden')));
+            
+            const setPracticeDifficulty = (difficulty) => {
+                currentPracticeDifficulty = difficulty;
+                document.querySelectorAll('.difficulty-btn').forEach(btn => {
+                    const isActive = btn.dataset.difficulty === difficulty;
+                    btn.classList.toggle('border-blue-600', isActive);
+                    btn.classList.toggle('bg-blue-600', isActive);
+                    btn.classList.toggle('text-white', isActive);
+                    btn.classList.toggle('border-gray-300', !isActive);
+                    btn.classList.toggle('text-gray-700', !isActive);
+                    btn.setAttribute('aria-checked', isActive);
+                    btn.setAttribute('tabindex', isActive ? '0' : '-1');
+                });
+                document.getElementById('difficulty-desc').textContent = {
+                    easy: 'Standard subnets (/24, /16, /8) - Perfect for beginners',
+                    medium: 'Intermediate subnets (/18 to /28) - Good for practice',
+                    hard: 'Any valid subnet mask (/8 to /30) - For the experts'
+                }[difficulty];
+                generatePracticeProblem();
+            };
+            document.querySelectorAll('.difficulty-btn').forEach(btn => btn.addEventListener('click', e => setPracticeDifficulty(e.currentTarget.dataset.difficulty)));
+
+
+            // --- Wildcard Mode ---
+            const wildcardIp = document.getElementById('wildcard-ip'), wildcardCidr = document.getElementById('wildcard-cidr');
+            const wildcardInputs = document.querySelectorAll('.wildcard-input');
+            const generateWildcardProblem = () => {
+                const octet = () => Math.floor(Math.random() * 256);
+                let ip = `${octet()}.${octet()}.${octet()}.0`;
+                let cidr;
+                if (currentWildcardDifficulty === 'easy') cidr = [16, 24, 25, 26, 27][Math.floor(Math.random() * 5)];
+                else if (currentWildcardDifficulty === 'medium') cidr = Math.floor(Math.random() * (28 - 18 + 1)) + 18;
+                else cidr = Math.floor(Math.random() * (30 - 8 + 1)) + 8;
+
+                wildcardAnswers = SubnetMath.getSubnetInfo(ip, cidr);
+                if (!wildcardAnswers) { generateWildcardProblem(); return; }
+
+                wildcardIp.value = wildcardAnswers.network;
+                wildcardCidr.value = cidr;
+
+                wildcardInputs.forEach(input => {
+                    input.value = '';
+                    input.classList.remove('field-correct', 'field-incorrect');
+                    input.closest('.flex').querySelector('.status-icon').innerHTML = '';
+                    input.closest('.flex').querySelector('.wildcard-check-btn').classList.add('hidden');
+                });
+                document.getElementById('wildcard-reference').classList.add('hidden');
+            };
+
+            function checkWildcardField(field) {
+                if (!wildcardAnswers) return;
+                const input = document.querySelector(`#wildcard-tab-content .wildcard-input[data-field="${field}"]`);
+                let isCorrect;
+                if (field === 'totalHosts') {
+                    const userNum = Number(String(input.value || '').replace(/[^\d-]/g, ''));
+                    const correctNum = Number(wildcardAnswers[field]);
+                    isCorrect = !Number.isNaN(userNum) && userNum === correctNum;
+                } else { 
+                    const userIp = normalizeIp(input.value);
+                    const correctIp = normalizeIp(wildcardAnswers[field]);
+                    isCorrect = userIp !== null && userIp === correctIp;
+                }
+
+                const statusEl = input.closest('.flex').querySelector('.status-icon');
+                input.classList.toggle('field-correct', isCorrect);
+                input.classList.toggle('field-incorrect', !isCorrect);
+                statusEl.innerHTML = isCorrect ? '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Correct</span>' : '<svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="sr-only">Incorrect</span>';
+            }
+            
+            document.getElementById('wildcard-tab-content').addEventListener('click', e => {
+                const field = e.target.closest('[data-field]')?.dataset.field;
+                if (e.target.classList.contains('wildcard-show-btn')) document.querySelector(`.wildcard-input[data-field="${field}"]`).value = wildcardAnswers[field].toLocaleString();
+                if (e.target.classList.contains('wildcard-check-btn')) checkWildcardField(field);
+            });
+            document.getElementById('wildcard-new-btn').addEventListener('click', generateWildcardProblem);
+            document.getElementById('wildcard-show-all').addEventListener('click', () => wildcardInputs.forEach(i => i.value = wildcardAnswers[i.dataset.field].toLocaleString()));
+            document.getElementById('wildcard-check-all').addEventListener('click', () => {
+                wildcardInputs.forEach(i => checkWildcardField(i.dataset.field));
+                document.getElementById('wildcard-ref-mask').textContent = wildcardAnswers.mask;
+                document.getElementById('wildcard-ref-network').textContent = wildcardAnswers.network;
+                document.getElementById('wildcard-ref-broadcast').textContent = wildcardAnswers.broadcast;
+                document.getElementById('wildcard-reference').classList.remove('hidden');
+            });
+            wildcardInputs.forEach(input => input.addEventListener('input', e => e.target.closest('.flex').querySelector('.wildcard-check-btn').classList.remove('hidden')));
+            
+            const setWildcardDifficulty = (difficulty) => {
+                currentWildcardDifficulty = difficulty;
+                document.querySelectorAll('.wildcard-difficulty-btn').forEach(btn => {
+                    const isActive = btn.dataset.difficulty === difficulty;
+                    btn.classList.toggle('border-blue-600', isActive);
+                    btn.classList.toggle('bg-blue-600', isActive);
+                    btn.classList.toggle('text-white', isActive);
+                    btn.classList.toggle('border-gray-300', !isActive);
+                    btn.classList.toggle('text-gray-700', !isActive);
+                    btn.setAttribute('aria-checked', isActive);
+                    btn.setAttribute('tabindex', isActive ? '0' : '-1');
+                });
+                document.getElementById('wildcard-difficulty-desc').textContent = {
+                    easy: 'Common CIDRs for ACLs (/24, /25, /26, etc.)',
+                    medium: 'Intermediate CIDRs (/18 to /28)',
+                    hard: 'Any valid CIDR (/8 to /30)'
+                }[difficulty];
+                generateWildcardProblem();
+            };
+            document.querySelectorAll('.wildcard-difficulty-btn').forEach(btn => btn.addEventListener('click', e => setWildcardDifficulty(e.currentTarget.dataset.difficulty)));
+
+            // --- Radio Group Keyboard Navigation ---
+            document.querySelectorAll('[role="radiogroup"]').forEach(rg => {
+              rg.addEventListener('keydown', e => {
+                if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
+                e.preventDefault();
+                const radios = Array.from(rg.querySelectorAll('[role="radio"]'));
+                let activeIndex = radios.findIndex(r => r.getAttribute('tabindex') === '0');
+                if (activeIndex === -1) activeIndex = 0;
+                const dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : -1;
+                const nextIndex = (activeIndex + dir + radios.length) % radios.length;
+                radios[nextIndex].click();
+                radios[nextIndex].focus();
+              });
+            });
+
+            // --- Flashcards ---
+            const fcContainer = document.getElementById('fc-container');
+            const fcRevealBtn = document.getElementById('fc-reveal-btn');
+            const fcNextBtn = document.getElementById('fc-next-btn');
+            let currentFcIndex = -1, isFcRevealed = false;
+            
+            function loadFlashcard() {
+                const cards = flashcardData[currentFlashcardDifficulty];
+                if (!cards || cards.length === 0) {
+                    fcContainer.innerHTML = `<div class="fc-placeholder">No cards available.</div>`;
+                    return;
+                }
+                currentFcIndex = Math.floor(Math.random() * cards.length);
+                const card = cards[currentFcIndex];
+                
+                fcContainer.innerHTML = `
+                    <div class="fc-inner">
+                        <div class="fc-card-face fc-card-front">${card.q}</div>
+                        <div class="fc-card-face fc-card-back">${card.a}</div>
+                    </div>
+                `;
+                isFcRevealed = false;
+                fcRevealBtn.disabled = false;
+                fcNextBtn.disabled = true;
+                fcRevealBtn.classList.remove('revealed-state');
+                fcRevealBtn.innerHTML = `Reveal <svg xmlns="http://www.w3.org/2000/svg" class="fc-icon fc-icon-right" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C3.732 4.943 9.522 3 10 3s6.268 1.943 9.542 7c-3.274 5.057-9.064 7-9.542 7S3.732 15.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>`;
+            }
+
+            function initFlashcards() {
+                document.querySelectorAll('.fc-difficulty-button').forEach(btn => {
+                    btn.addEventListener('click', e => {
+                        currentFlashcardDifficulty = e.target.dataset.difficulty;
+                        document.querySelectorAll('.fc-difficulty-button').forEach(b => b.classList.remove('active', 'easy', 'medium', 'hard'));
+                        e.target.classList.add('active', currentFlashcardDifficulty);
+                        loadFlashcard();
+                    });
+                });
+                document.querySelector('.fc-difficulty-button.easy').click();
+                isFlashcardInitialized = true;
+            }
+
+            fcRevealBtn.addEventListener('click', () => {
+                if (!isFcRevealed) {
+                    fcContainer.querySelector('.fc-inner').classList.add('is-revealed');
+                    isFcRevealed = true;
+                    fcRevealBtn.disabled = true;
+                    fcNextBtn.disabled = false;
+                    fcRevealBtn.classList.add('revealed-state');
+                    fcRevealBtn.innerHTML = `Revealed`;
+                    setTimeout(() => { fcRevealBtn.disabled = false; }, 700); // Prevent spamming
+                }
+            });
+            fcNextBtn.addEventListener('click', () => {
+                fcContainer.querySelector('.fc-inner').classList.remove('is-revealed');
+                setTimeout(loadFlashcard, 350);
+            });
+
+            // --- INITIALIZATION ---
+            updateCalculator();
+            generatePracticeProblem();
+            generateWildcardProblem();
+        });
+    </script>
+</body>
+</html>
