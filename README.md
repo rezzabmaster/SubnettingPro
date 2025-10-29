@@ -11,8 +11,7 @@ This repository contains a comprehensive subnetting calculator, allowing users t
 ## Installation
 
 To run the subnetting calculator locally, follow these steps:
-1. Clone the repository: `git clone https://github.com/rezzabmaster/SubnettingPro.git`
-2. Open `index.html` in your web browser.
+1. Download and Open `subnettingpro.html` in your web browser.
 
 ## Usage
 
